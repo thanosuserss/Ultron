@@ -1,4 +1,4 @@
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# CatUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# UltronUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # Copyright (C) 2020-2023 by TgCatUB@Github.
 
 # This file is part of: https://github.com/thanosuserss/Ultron
@@ -85,11 +85,11 @@ def random_loader(Font, Color, Background, collection):
             "{tr}slogo <text/reply>",
         ],
         "examples": [
-            "{tr}logo CatUserbot",
-            "{tr}logo 10;CatUserbot",
-            "{tr}flogo CatUserBot",
-            "{tr}flogo 5; CatUserbot",
-            "{tr}slogo CatUserBot",
+            "{tr}logo UltronUserBot",
+            "{tr}logo 10;UltronUserBot",
+            "{tr}flogo UltronUserBot",
+            "{tr}flogo 5; UltronUserBot",
+            "{tr}slogo UltronUserBot",
         ],
     },
 )
@@ -127,7 +127,7 @@ async def very(event):  # sourcery no-metrics
     rcheck = random_checker(LOGO_FONT, LOGO_FONT_COLOR, LOGO_BACKGROUND)
     if rcheck:
         rjson = requests.get(
-            "https://raw.githubusercontent.com/TgCatUB/CatUserbot-Resources/master/Resources/Logo/resources.txt"
+            "https://raw.githubusercontent.com/TgCatUB/UltronUserBot-Resources/master/Resources/Logo/resources.txt"
         ).json()
     if count > 1 and not rcheck:
         count = 1

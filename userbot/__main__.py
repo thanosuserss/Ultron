@@ -1,4 +1,4 @@
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# CatUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# UltronUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # Copyright (C) 2020-2023 by TgCatUB@Github.
 
 # This file is part of: https://github.com/thanosuserss/Ultron
@@ -25,7 +25,7 @@ from .utils import (
     verifyLoggerGroup,
 )
 
-LOGS = logging.getLogger("CatUserbot")
+LOGS = logging.getLogger("UltronUserBot")
 
 LOGS.info(userbot.__copyright__)
 LOGS.info(f"Licensed under the terms of the {userbot.__license__}")
@@ -52,7 +52,7 @@ async def startup_process():
     LOGS.info(
         f"||   Congratulation, now type {cmdhr}alive to see message if catub is live"
     )
-    LOGS.info("||   If you need assistance, head to https://t.me/catuserbot_support")
+    LOGS.info("||   If you need assistance, head to https://t.me/UltronUserBot_support")
     LOGS.info(
         "============================================================================"
     )

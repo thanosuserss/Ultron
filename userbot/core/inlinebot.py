@@ -1,4 +1,4 @@
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# CatUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# UltronUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # Copyright (C) 2020-2023 by TgCatUB@Github.
 
 # This file is part of: https://github.com/thanosuserss/Ultron
@@ -133,7 +133,7 @@ async def help_article(event):
     return await build_article(
         event,
         title="Help Menu",
-        description="Help menu for CatUserbot.",
+        description="Help menu for UltronUserBot.",
         thumbnail=get_thumb("help.png"),
         text=help_info[0],
         buttons=help_info[1],
@@ -237,7 +237,7 @@ async def vcplayer_article(event):
 async def article_builder(event, method):
     media = thumb = None
     title = "Cat Userbot"
-    description = "Button menu for CatUserbot"
+    description = "Button menu for UltronUserBot"
     if method == "ialive":
         buttons = [
             (
@@ -253,7 +253,7 @@ async def article_builder(event, method):
             return None
         title = "Cat Alive"
         thumb = get_thumb("alive.png")
-        description = "Alive menu for CatUserbot."
+        description = "Alive menu for UltronUserBot."
         ALIVE_PIC = gvarstatus("ALIVE_PIC")
         IALIVE_PIC = gvarstatus("IALIVE_PIC")
         if IALIVE_PIC:

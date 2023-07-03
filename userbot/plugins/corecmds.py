@@ -1,4 +1,4 @@
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# CatUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# UltronUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # Copyright (C) 2020-2023 by TgCatUB@Github.
 
 # This file is part of: https://github.com/thanosuserss/Ultron
@@ -208,7 +208,7 @@ async def unload(event):
     },
 )
 async def app_log(event):
-    "To get log of the Catuserbot"
+    "To get log of the UltronUserBot"
     flag = event.pattern_match.group(1)
     flag = [*flag]
     if flag and (flag[0] != "-" or any(i not in ["-", "f", "r", "t"] for i in flag)):

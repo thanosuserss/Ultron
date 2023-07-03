@@ -1,4 +1,4 @@
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# CatUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# UltronUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # Copyright (C) 2020-2023 by TgCatUB@Github.
 
 # This file is part of: https://github.com/thanosuserss/Ultron
@@ -30,9 +30,9 @@ plugin_category = "misc"
         "description": "To search images in google. By default will send 3 images.you can get more images(upto 10 only by changing limit value as shown in usage and examples.",
         "usage": ["{tr}img <1-10> <query>", "{tr}img <query>"],
         "examples": [
-            "{tr}img 10 catuserbot",
-            "{tr}img catuserbot",
-            "{tr}img 7 catuserbot",
+            "{tr}img 10 UltronUserBot",
+            "{tr}img UltronUserBot",
+            "{tr}img 7 UltronUserBot",
         ],
     },
 )

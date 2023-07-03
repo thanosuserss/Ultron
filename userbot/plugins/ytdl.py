@@ -1,4 +1,4 @@
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# CatUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# UltronUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # Copyright (C) 2020-2023 by TgCatUB@Github.
 
 # This file is part of: https://github.com/thanosuserss/Ultron
@@ -179,7 +179,7 @@ async def download_audio(event):  # sourcery skip: low-code-quality
                 url, download=False
             )
         except ExtractorError:
-            vid_data = {"title": url, "uploader": "Catuserbot", "formats": []}
+            vid_data = {"title": url, "uploader": "UltronUserBot", "formats": []}
         startTime = time()
         retcode = await _mp3Dl(url=url, starttime=startTime, uid="320")
         if retcode != 0:

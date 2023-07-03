@@ -1,4 +1,4 @@
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# CatUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# UltronUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # Copyright (C) 2020-2023 by TgCatUB@Github.
 
 # This file is part of: https://github.com/thanosuserss/Ultron
@@ -32,7 +32,7 @@ async def gps(event):
     reply_to_id = await reply_id(event)
     input_str = event.pattern_match.group(1)
     catevent = await edit_or_reply(event, "`finding.....`")
-    geolocator = Nominatim(user_agent="catuserbot")
+    geolocator = Nominatim(user_agent="UltronUserBot")
     if geoloc := geolocator.geocode(input_str):
         lon = geoloc.longitude
         lat = geoloc.latitude

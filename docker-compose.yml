@@ -1,4 +1,4 @@
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# CatUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# UltronUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # Copyright (C) 2020-2023 by TgCatUB@Github.
 
 # This file is part of: https://github.com/thanosuserss/Ultron
@@ -18,7 +18,7 @@ services:
     command: python3 -m userbot
     restart: on-failure
     environment:
-      - DATABASE_URL=postgresql://postgres:postgres@db/catuserbot
+      - DATABASE_URL=postgresql://postgres:postgres@db/UltronUserBot
     depends_on:
       - db
 
@@ -28,7 +28,7 @@ services:
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
-      - POSTGRES_DB=catuserbot
+      - POSTGRES_DB=UltronUserBot
     volumes:
       - db:/var/lib/postgresql/data
 volumes:

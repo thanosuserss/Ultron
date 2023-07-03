@@ -1,6 +1,6 @@
 """ Module to display Currenty Playing Spotify Songs in your bio """
 
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# CatUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# UltronUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # Copyright (C) 2020-2023 by TgCatUB@Github.
 
 # This file is part of: https://github.com/thanosuserss/Ultron
@@ -82,7 +82,7 @@ OFFSET = 1
 LIMIT = 70 - OFFSET
 # [----------------------------------------------------------------------]
 # Errors
-no_sp_vars = "Vars `SPOTIFY_CLIENT_ID` & `SPOTIFY_CLIENT_SECRET` are missing, add them first !\n\n[Follow this tutorial](https://graph.org/Steps-of-setting-Spotify-Vars-in-Catuserbot-04-24-2)"
+no_sp_vars = "Vars `SPOTIFY_CLIENT_ID` & `SPOTIFY_CLIENT_SECRET` are missing, add them first !\n\n[Follow this tutorial](https://graph.org/Steps-of-setting-Spotify-Vars-in-UltronUserBot-04-24-2)"
 
 
 class Database:
@@ -472,7 +472,7 @@ async def sp_var_check(event):
         return False
     if SP_DATABASE is None:
         await event.edit(
-            "ERROR :: No Database was found!\n**Do `.help spsetup` for more info.**\n\n[Follow this tutorial](https://graph.org/Steps-of-setting-Spotify-Vars-in-Catuserbot-04-24-2)"
+            "ERROR :: No Database was found!\n**Do `.help spsetup` for more info.**\n\n[Follow this tutorial](https://graph.org/Steps-of-setting-Spotify-Vars-in-UltronUserBot-04-24-2)"
         )
         return False
     return True
@@ -683,7 +683,7 @@ async def spotify_inline_article():
         buttons = [
             Button.url(
                 "Tutorial",
-                "https://graph.org/Steps-of-setting-Spotify-Vars-in-Catuserbot-04-24-2",
+                "https://graph.org/Steps-of-setting-Spotify-Vars-in-UltronUserBot-04-24-2",
             )
         ]
     else:

@@ -1,4 +1,4 @@
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# CatUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# UltronUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # Copyright (C) 2020-2023 by TgCatUB@Github.
 
 # This file is part of: https://github.com/thanosuserss/Ultron
@@ -30,7 +30,7 @@ plugin_category = "tools"
     info={
         "header": "Find the md5, sha1, sha256, sha512 of the string when written into a txt file.",
         "usage": "{tr}hash <text>",
-        "examples": "{tr}hash catuserbot",
+        "examples": "{tr}hash UltronUserBot",
     },
 )
 async def gethash(hash_q):
@@ -71,7 +71,7 @@ async def gethash(hash_q):
             "de": "use this to decode the given text.",
         },
         "usage": ["{tr}hbase en <text to encode>", "{tr}hbase de <encoded text>"],
-        "examples": ["{tr}hbase en Catuserbot", "{tr}hbase de Q2F0dXNlcmJvdA=="],
+        "examples": ["{tr}hbase en UltronUserBot", "{tr}hbase de Q2F0dXNlcmJvdA=="],
     },
 )
 async def endecrypt(event):

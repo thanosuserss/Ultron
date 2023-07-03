@@ -1,4 +1,4 @@
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# CatUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# UltronUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # Copyright (C) 2020-2023 by TgCatUB@Github.
 
 # This file is part of: https://github.com/thanosuserss/Ultron
@@ -105,7 +105,7 @@ async def _(event):
     info={
         "header": "Split the word and forwards each letter from previous messages in that group",
         "usage": "{tr}fpost <text>",
-        "examples": "{tr}fpost catuserbot",
+        "examples": "{tr}fpost UltronUserBot",
     },
 )
 async def _(event):

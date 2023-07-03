@@ -1,4 +1,4 @@
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# CatUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# UltronUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # Copyright (C) 2020-2023 by TgCatUB@Github.
 
 # This file is part of: https://github.com/thanosuserss/Ultron
@@ -72,7 +72,7 @@ async def currency(event):
             f"https://free.currconv.com/api/v7/convert?q={fromcurrency}_{tocurrency}&compact=ultra&apiKey={Config.CURRENCY_API}"
         )
         symbols = await AioHttp().get_raw(
-            "https://raw.githubusercontent.com/TgCatUB/CatUserbot-Resources/master/Resources/Data/currency.py"
+            "https://raw.githubusercontent.com/TgCatUB/UltronUserBot-Resources/master/Resources/Data/currency.py"
         )
 
         symbols = json.loads(re.sub(", *\n *}", "}", symbols.decode("utf-8")))

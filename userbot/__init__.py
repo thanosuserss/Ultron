@@ -1,4 +1,4 @@
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# CatUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# UltronUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # Copyright (C) 2020-2023 by TgCatUB@Github.
 
 # This file is part of: https://github.com/thanosuserss/Ultron
@@ -23,12 +23,12 @@ from .sql_helper.globals import addgvar, delgvar, gvarstatus
 
 __version__ = "3.3.0"
 __license__ = "GNU Affero General Public License v3.0"
-__author__ = "CatUserBot <https://github.com/thanosuserss/Ultron>"
+__author__ = "UltronUserBot <https://github.com/thanosuserss/Ultron>"
 __copyright__ = f"Copyright (C) 2020 - 2023  {__author__}"
 
 catub.version = __version__
 catub.tgbot.version = __version__
-LOGS = logging.getLogger("CatUserbot")
+LOGS = logging.getLogger("UltronUserBot")
 bot = catub
 
 StartTime = time.time()

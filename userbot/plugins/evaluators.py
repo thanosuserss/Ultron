@@ -1,6 +1,6 @@
 """ Tools for lazy devs """
 
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# CatUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# UltronUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # Copyright (C) 2020-2023 by TgCatUB@Github.
 
 # This file is part of: https://github.com/thanosuserss/Ultron
@@ -44,7 +44,7 @@ async def _(event):
     stdout, stderr = await process.communicate()
     result = str(stdout.decode().strip()) + str(stderr.decode().strip())
     catuser = await event.client.get_me()
-    curruser = catuser.username or "catuserbot"
+    curruser = catuser.username or "UltronUserBot"
     uid = os.geteuid()
     if uid == 0:
         cresult = f"```{curruser}:~#``` ```{cmd}```\n```{result}```"
@@ -68,7 +68,7 @@ async def _(event):
     info={
         "header": "To Execute python script/statements in a subprocess.",
         "usage": "{tr}eval <command>",
-        "examples": "{tr}eval print('catuserbot')",
+        "examples": "{tr}eval print('UltronUserBot')",
     },
 )
 async def _(event):

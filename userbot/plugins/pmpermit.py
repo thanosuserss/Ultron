@@ -1,4 +1,4 @@
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# CatUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# UltronUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # Copyright (C) 2020-2023 by TgCatUB@Github.
 
 # This file is part of: https://github.com/thanosuserss/Ultron
@@ -139,13 +139,13 @@ async def do_pm_permit_action(event, chat):  # sourcery no-metrics
     elif gvarstatus("pmmenu") is None:
         USER_BOT_NO_WARN = f"""__Hi__ {mention}__, I haven't approved you yet to personal message me. 
 
-You have {warns}/{totalwarns} warns until you get blocked by the CatUserbot.
+You have {warns}/{totalwarns} warns until you get blocked by the UltronUserBot.
 
 Choose an option from below to specify the reason of your message and wait for me to check it. __⬇️"""
     else:
         USER_BOT_NO_WARN = f"""__Hi__ {mention}__, I haven't approved you yet to personal message me.
 
-You have {warns}/{totalwarns} warns until you get blocked by the CatUserbot.
+You have {warns}/{totalwarns} warns until you get blocked by the UltronUserBot.
 
 Don't spam my inbox. say reason and wait until my response.__"""
     addgvar("PM_TEXT", USER_BOT_NO_WARN)

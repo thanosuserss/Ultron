@@ -1,4 +1,4 @@
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# CatUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# UltronUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # Copyright (C) 2020-2023 by TgCatUB@Github.
 
 # This file is part of: https://github.com/thanosuserss/Ultron
@@ -39,7 +39,7 @@ plugin_category = "utils"
 
 thumb_image_path = os.path.join(Config.TMP_DOWNLOAD_DIRECTORY, "thumb_image.jpg")
 FF_MPEG_DOWN_LOAD_MEDIA_PATH = os.path.join(
-    Config.TMP_DOWNLOAD_DIRECTORY, "catuserbot.media.ffmpeg"
+    Config.TMP_DOWNLOAD_DIRECTORY, "UltronUserBot.media.ffmpeg"
 )
 FINISHED_PROGRESS_STR = Config.FINISHED_PROGRESS_STR
 UN_FINISHED_PROGRESS_STR = Config.UNFINISHED_PROGRESS_STR

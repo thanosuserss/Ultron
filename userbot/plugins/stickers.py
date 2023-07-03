@@ -1,4 +1,4 @@
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# CatUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# UltronUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # Copyright (C) 2020-2023 by TgCatUB@Github.
 
 # This file is part of: https://github.com/thanosuserss/Ultron
@@ -78,10 +78,10 @@ def verify_cond(catarray, text):
 
 def pack_name(userid, pack, is_anim, is_video):
     if is_anim:
-        return f"catuserbot_{userid}_{pack}_anim"
+        return f"UltronUserBot_{userid}_{pack}_anim"
     if is_video:
-        return f"catuserbot_{userid}_{pack}_vid"
-    return f"catuserbot_{userid}_{pack}"
+        return f"UltronUserBot_{userid}_{pack}_vid"
+    return f"UltronUserBot_{userid}_{pack}"
 
 
 def char_is_emoji(character):
@@ -750,7 +750,7 @@ async def pussycat(event):
             "{tr}gridpack -e👌 <packname>",
         ],
         "examples": [
-            "{tr}gridpack -e👌 CatUserbot",
+            "{tr}gridpack -e👌 UltronUserBot",
         ],
     },
 )
@@ -778,7 +778,7 @@ async def pic2packcmd(event):
     except Exception:
         emoji = "▫️"
     chat = "@Stickers"
-    name = "CatUserbot_" + "".join(
+    name = "UltronUserBot_" + "".join(
         random.choice(list(string.ascii_lowercase + string.ascii_uppercase))
         for _ in range(16)
     )

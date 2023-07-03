@@ -1,4 +1,4 @@
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# CatUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# UltronUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # Copyright (C) 2020-2023 by TgCatUB@Github.
 
 # This file is part of: https://github.com/thanosuserss/Ultron
@@ -106,7 +106,7 @@ async def sticklet(event):
     draw = ImageDraw.Draw(image)
     fontsize = 230
     json = requests.get(
-        "https://raw.githubusercontent.com/TgCatUB/CatUserbot-Resources/master/Resources/StickerFun/resources.txt"
+        "https://raw.githubusercontent.com/TgCatUB/UltronUserBot-Resources/master/Resources/StickerFun/resources.txt"
     ).json()
     FONT_FILE = requests.get(random.choice(json["fonts"]))
     font = ImageFont.truetype(BytesIO(FONT_FILE.content), size=fontsize)
@@ -118,7 +118,7 @@ async def sticklet(event):
         ((512 - width) / 2, (512 - height) / 2), sticktext, font=font, fill=(RGB)
     )
     image_stream = BytesIO()
-    image_stream.name = "catuserbot.webp"
+    image_stream.name = "UltronUserBot.webp"
     image.save(image_stream, "WebP")
     image_stream.seek(0)
     # finally, reply the sticker
@@ -162,7 +162,7 @@ async def honk(event):
     info={
         "header": "Make a cool tweet of your account",
         "usage": "{tr}twt <text/reply to msg>",
-        "examples": "{tr}twt Catuserbot",
+        "examples": "{tr}twt UltronUserBot",
     },
 )
 async def twt(event):

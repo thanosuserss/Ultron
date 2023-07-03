@@ -1,4 +1,4 @@
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# CatUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# UltronUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # Copyright (C) 2020-2023 by TgCatUB@Github.
 
 # This file is part of: https://github.com/thanosuserss/Ultron
@@ -241,7 +241,7 @@ async def stickerpack_spam(event):
         "header": "Spam the text letter by letter",
         "description": "Spam the chat with every letter in given text as new message.",
         "usage": "{tr}cspam <text>",
-        "examples": "{tr}cspam Catuserbot",
+        "examples": "{tr}cspam UltronUserBot",
     },
 )
 async def tmeme(event):
@@ -276,7 +276,7 @@ async def tmeme(event):
         "header": "Spam the text word by word.",
         "description": "Spams the chat with every word in given text as new message.",
         "usage": "{tr}wspam <text>",
-        "examples": "{tr}wspam I am using catuserbot",
+        "examples": "{tr}wspam I am using UltronUserBot",
     },
 )
 async def tmeme(event):

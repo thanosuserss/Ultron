@@ -1,4 +1,4 @@
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# CatUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# UltronUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # Copyright (C) 2020-2023 by TgCatUB@Github.
 
 # This file is part of: https://github.com/thanosuserss/Ultron
@@ -93,8 +93,8 @@ async def covidindia(state):
 async def post_to_telegraph(
     page_title,
     html_format_content,
-    auth_name="CatUserbot",
-    auth_url="https://t.me/catuserbot17",
+    auth_name="UltronUserBot",
+    auth_url="https://t.me/UltronUserBot17",
 ):
     post_client = TelegraphPoster(use_api=True)
     post_client.create_api_token(auth_name)

@@ -28,7 +28,7 @@ You can generate String several ways:
 
 **➦ Locally**
 
-{% code title="Run this inside catuserbot directory" overflow="wrap" %}
+{% code title="Run this inside UltronUserBot directory" overflow="wrap" %}
 ```batch
 pip3 install git+https://github.com/jisan09/Telethon && python3 stringsetup.py
 ```
@@ -74,13 +74,13 @@ sudo apt install postgresql postgresql-contrib
 
 {% code title="Then run this in terminal" overflow="wrap" %}
 ```batch
-sudo su - postgres bash -c "psql -c \"ALTER USER postgres WITH PASSWORD 'your_password';\" && createdb catuserbot -O postgres"
+sudo su - postgres bash -c "psql -c \"ALTER USER postgres WITH PASSWORD 'your_password';\" && createdb UltronUserBot -O postgres"
 ```
 {% endcode %}
 
 {% code title="Your DB_URI will be" overflow="wrap" %}
 ```batch
-postgresql://postgres:your_password@localhost:5432/catuserbot
+postgresql://postgres:your_password@localhost:5432/UltronUserBot
 ```
 {% endcode %}
 {% endtab %}

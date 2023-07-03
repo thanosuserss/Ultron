@@ -1,6 +1,6 @@
 """ Broadcast your message to saved chatlist """
 
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# CatUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# UltronUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # Copyright (C) 2020-2023 by TgCatUB@Github.
 
 # This file is part of: https://github.com/thanosuserss/Ultron
@@ -38,7 +38,7 @@ LOGS = logging.getLogger(__name__)
             "{tr}msgto <username/userid/chatid/chatusername> reply to message",
             "{tr}msgto <username/userid/chatid/chatusername> <text>",
         ],
-        "examples": "{tr}msgto @catuserbotot just a testmessage",
+        "examples": "{tr}msgto @UltronUserBotot just a testmessage",
     },
 )
 async def catbroadcast_add(event):

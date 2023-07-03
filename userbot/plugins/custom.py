@@ -1,4 +1,4 @@
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# CatUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# UltronUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # Copyright (C) 2020-2023 by TgCatUB@Github.
 
 # This file is part of: https://github.com/thanosuserss/Ultron
@@ -26,7 +26,7 @@ extractor = URLExtract()
     pattern="custom (pmpermit|pmpic|pmblock|startmsg)$",
     command=("custom", plugin_category),
     info={
-        "header": "To customize your CatUserbot.",
+        "header": "To customize your UltronUserBot.",
         "options": {
             "pmpermit": "To customize pmpermit text. ",
             "pmblock": "To customize pmpermit block message.",
@@ -56,7 +56,7 @@ extractor = URLExtract()
     },
 )
 async def custom(event):
-    "To customize your CatUserbot."
+    "To customize your UltronUserBot."
     reply = await event.get_reply_message()
     text = None
     if reply:
@@ -90,7 +90,7 @@ async def custom(event):
     pattern="delcustom (pmpermit|pmpic|pmblock|startmsg)$",
     command=("delcustom", plugin_category),
     info={
-        "header": "To delete costomization of your CatUserbot.",
+        "header": "To delete costomization of your UltronUserBot.",
         "options": {
             "pmpermit": "To delete custom pmpermit text",
             "pmblock": "To delete custom pmpermit block message",
@@ -104,7 +104,7 @@ async def custom(event):
     },
 )
 async def del_custom(event):
-    "To delete costomization of your CatUserbot."
+    "To delete costomization of your UltronUserBot."
     input_str = event.pattern_match.group(1)
     if input_str == "pmpermit":
         if gvarstatus("PM_TEXT") is None:

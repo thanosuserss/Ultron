@@ -1,4 +1,4 @@
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# CatUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# UltronUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # Copyright (C) 2020-2023 by TgCatUB@Github.
 
 # This file is part of: https://github.com/thanosuserss/Ultron
@@ -13,7 +13,7 @@ from telethon.network.connection.tcpabridged import ConnectionTcpAbridged
 from telethon.sessions import StringSession
 
 from ..Config import Config
-from .client import CatUserBotClient
+from .client import UltronUserBotClient
 
 __version__ = "3.3.0"
 
@@ -22,10 +22,10 @@ loop = None
 if Config.STRING_SESSION:
     session = StringSession(str(Config.STRING_SESSION))
 else:
-    session = "catuserbot"
+    session = "UltronUserBot"
 
 try:
-    catub = CatUserBotClient(
+    catub = UltronUserBotClient(
         session=session,
         api_id=Config.APP_ID,
         api_hash=Config.API_HASH,
@@ -40,7 +40,7 @@ except Exception as e:
     sys.exit()
 
 
-catub.tgbot = tgbot = CatUserBotClient(
+catub.tgbot = tgbot = UltronUserBotClient(
     session="CatTgbot",
     api_id=Config.APP_ID,
     api_hash=Config.API_HASH,

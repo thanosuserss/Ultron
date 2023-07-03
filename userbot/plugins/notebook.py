@@ -1,4 +1,4 @@
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# CatUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# UltronUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # Copyright (C) 2020-2023 by TgCatUB@Github.
 
 # This file is part of: https://github.com/thanosuserss/Ultron
@@ -252,7 +252,7 @@ async def write_page(event):  # sourcery skip: low-code-quality
     if cmd == "notebook":
         text = (
             (await catub(GetFullUserRequest(catub.uid))).full_user
-        ).about or "This is just a Sample text\n              -by Catuserbot"
+        ).about or "This is just a Sample text\n              -by UltronUserBot"
         cap = f"**NoteBook Configs :-**\n\n**Font:** `{font}`\n**Page:** `{list(Pages.keys())[list(Pages.values()).index(page)]}`\n**Color:** `{foreground.title()}`\n**Log:**  `{log}`"
     reply_to_id = await reply_id(event)
     text = deEmojify(text)

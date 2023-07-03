@@ -1,4 +1,4 @@
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# CatUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# UltronUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # Copyright (C) 2020-2023 by TgCatUB@Github.
 
 # This file is part of: https://github.com/thanosuserss/Ultron
@@ -21,8 +21,8 @@ from . import catub, edit_delete, edit_or_reply
 plugin_category = "utils"
 
 
-bg_url_1 = "https://raw.githubusercontent.com/TgCatUB/CatUserbot-Resources/master/Resources/App/app-full.jpg"
-bg_url_2 = "https://raw.githubusercontent.com/TgCatUB/CatUserbot-Resources/master/Resources/App/app-suggest.jpg"
+bg_url_1 = "https://raw.githubusercontent.com/TgCatUB/UltronUserBot-Resources/master/Resources/App/app-full.jpg"
+bg_url_2 = "https://raw.githubusercontent.com/TgCatUB/UltronUserBot-Resources/master/Resources/App/app-suggest.jpg"
 
 
 def text_draw(font_name, font_size, img, text, width, hight, fill="white"):

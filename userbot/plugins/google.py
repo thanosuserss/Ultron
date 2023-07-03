@@ -1,6 +1,6 @@
 """ Reverse search image and Google search """
 
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# CatUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# UltronUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # Copyright (C) 2020-2023 by TgCatUB@Github.
 
 # This file is part of: https://github.com/thanosuserss/Ultron
@@ -40,10 +40,10 @@ plugin_category = "tools"
             "{tr}gs <query>",
         ],
         "examples": [
-            "{tr}gs catuserbot",
-            "{tr}gs -l6 catuserbot",
-            "{tr}gs -p2 catuserbot",
-            "{tr}gs -p2 -l7 catuserbot",
+            "{tr}gs UltronUserBot",
+            "{tr}gs -l6 UltronUserBot",
+            "{tr}gs -p2 UltronUserBot",
+            "{tr}gs -p2 -l7 UltronUserBot",
         ],
     },
 )

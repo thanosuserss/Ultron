@@ -18,9 +18,9 @@ sudo apt update && sudo apt upgrade -y \
 
 ### 〣 _**Clone the repo & make config**_ <a href="#clone-repo" id="clone-repo"></a>
 
-{% code title="Change dir to catuserbot & make config.py to save config values" overflow="wrap" %}
+{% code title="Change dir to UltronUserBot & make config.py to save config values" overflow="wrap" %}
 ```batch
-git clone https://github.com/thanosuserss/Ultron && cd catuserbot && mv exampleconfig.py config.py
+git clone https://github.com/thanosuserss/Ultron && cd UltronUserBot && mv exampleconfig.py config.py
 ```
 {% endcode %}
 
@@ -35,9 +35,9 @@ git clone https://github.com/thanosuserss/Ultron && cd catuserbot && mv examplec
 
 ### 〣 _**Create a Virtual**_ environment _**& install requirements**_ <a href="#create-venv" id="create-venv"></a>
 
-{% code title="Create catuserbot screen session" overflow="wrap" %}
+{% code title="Create UltronUserBot screen session" overflow="wrap" %}
 ```batch
-screen -S catuserbot
+screen -S UltronUserBot
 ```
 {% endcode %}
 
@@ -52,7 +52,7 @@ pip install virtualenv && virtualenv venv && source venv/bin/activate && pip3 in
 * _**Run:**_ `python3 -m userbot`
 * _**Close Screen:**_ Press <mark style="color:red;">CTRL+A</mark> and after that <mark style="color:red;">CTRL+D</mark>
 * _**Check:**_ `screen -ls`
-* _**Reattach Screen:**_ `screen -r <some_id>.catuserbot`
+* _**Reattach Screen:**_ `screen -r <some_id>.UltronUserBot`
 
 ## ≡ _Video Tutorial_
 

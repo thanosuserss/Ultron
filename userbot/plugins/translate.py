@@ -1,4 +1,4 @@
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# CatUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# UltronUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # Copyright (C) 2020-2023 by TgCatUB@Github.
 
 # This file is part of: https://github.com/thanosuserss/Ultron
@@ -29,7 +29,7 @@ plugin_category = "utils"
             "{tr}tl <language code> ; <text>",
             "{tr}tl <language codes>",
         ],
-        "examples": "{tr}tl te ; Catuserbot is one of the popular bot",
+        "examples": "{tr}tl te ; UltronUserBot is one of the popular bot",
     },
 )
 async def _(event):

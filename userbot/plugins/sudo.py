@@ -1,4 +1,4 @@
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# CatUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# UltronUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # Copyright (C) 2020-2023 by TgCatUB@Github.
 
 # This file is part of: https://github.com/thanosuserss/Ultron
@@ -49,13 +49,13 @@ def get_key(val):
     pattern="sudo (on|off)$",
     command=("sudo", plugin_category),
     info={
-        "header": "To enable or disable sudo of your Catuserbot.",
+        "header": "To enable or disable sudo of your UltronUserBot.",
         "description": "Initially all sudo commands are disabled, you need to enable them by addscmd\n Check `{tr}help -c addscmd`",
         "usage": "{tr}sudo <on/off>",
     },
 )
 async def chat_blacklist(event):
-    "To enable or disable sudo of your CatUserbot."
+    "To enable or disable sudo of your UltronUserBot."
     input_str = event.pattern_match.group(1)
     sudousers = _sudousers_list()
     if input_str == "on":
@@ -185,9 +185,9 @@ async def _(event):
         sudousers = {}
     if len(sudochats) == 0:
         return await edit_delete(
-            event, "__There are no sudo users for your Catuserbot.__"
+            event, "__There are no sudo users for your UltronUserBot.__"
         )
-    result = "**The list of sudo users for your Catuserbot are :**\n\n"
+    result = "**The list of sudo users for your UltronUserBot are :**\n\n"
     for chat in sudochats:
         result += f"☞ **Name:** {mentionuser(sudousers[str(chat)]['chat_name'],sudousers[str(chat)]['chat_id'])}\n"
         result += f"**Chat Id :** `{chat}`\n"
@@ -266,7 +266,7 @@ async def _(event):  # sourcery no-metrics  # sourcery skip: low-code-quality
         for plugin in input_str:
             if plugin not in PLG_INFO:
                 errors += (
-                    f"`{plugin}` __There is no such plugin in your CatUserbot__.\n"
+                    f"`{plugin}` __There is no such plugin in your UltronUserBot__.\n"
                 )
             else:
                 loadcmds += PLG_INFO[plugin]
@@ -275,14 +275,14 @@ async def _(event):  # sourcery no-metrics  # sourcery skip: low-code-quality
         loadcmds = []
         for cmd in input_str:
             if cmd not in CMD_INFO:
-                errors += f"`{cmd}` __There is no such command in your CatUserbot__.\n"
+                errors += f"`{cmd}` __There is no such command in your UltronUserBot__.\n"
             elif cmd in sudocmds:
                 errors += f"`{cmd}` __Is already enabled for sudo users__.\n"
             else:
                 loadcmds.append(cmd)
     for cmd in loadcmds:
         sqllist.add_to_list("sudo_enabled_cmds", cmd)
-    result = f"__Successfully enabled __ `{len(loadcmds)}` __ for CatUserbot sudo.__\n"
+    result = f"__Successfully enabled __ `{len(loadcmds)}` __ for UltronUserBot sudo.__\n"
     output = (
         result + "**Bot is reloading to apply the changes. Please wait for a minute**\n"
     )
@@ -357,7 +357,7 @@ async def _(event):  # sourcery no-metrics  # sourcery skip: low-code-quality
         for plugin in input_str:
             if plugin not in PLG_INFO:
                 errors += (
-                    f"`{plugin}` __There is no such plugin in your CatUserbot__.\n"
+                    f"`{plugin}` __There is no such plugin in your UltronUserBot__.\n"
                 )
             else:
                 flagcmds += PLG_INFO[plugin]
@@ -366,7 +366,7 @@ async def _(event):  # sourcery no-metrics  # sourcery skip: low-code-quality
         flagcmds = []
         for cmd in input_str:
             if cmd not in CMD_INFO:
-                errors += f"`{cmd}` __There is no such command in your CatUserbot__.\n"
+                errors += f"`{cmd}` __There is no such command in your UltronUserBot__.\n"
             elif cmd not in sudocmds:
                 errors += f"`{cmd}` __Is already disabled for sudo users__.\n"
             else:
@@ -376,7 +376,7 @@ async def _(event):  # sourcery no-metrics  # sourcery skip: low-code-quality
         if sqllist.is_in_list("sudo_enabled_cmds", cmd):
             count += 1
             sqllist.rm_from_list("sudo_enabled_cmds", cmd)
-    result = f"__Successfully disabled __ `{count}` __ for CatUserbot sudo.__\n"
+    result = f"__Successfully disabled __ `{count}` __ for UltronUserBot sudo.__\n"
     output = (
         result + "**Bot is reloading to apply the changes. Please wait for a minute**\n"
     )

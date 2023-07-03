@@ -1,4 +1,4 @@
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# CatUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# UltronUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # Copyright (C) 2020-2023 by TgCatUB@Github.
 
 # This file is part of: https://github.com/thanosuserss/Ultron
@@ -368,7 +368,7 @@ async def formatJSON(outData, manga=False):
     msg += f"\n**Year** : {jsonData['startDate']['year']}"
     msg += f"\n**Score** : {jsonData['averageScore']}"
     msg += f"\n**Popularity** : {jsonData['popularity']}"
-    # https://t.me/catuserbot_support/19496
+    # https://t.me/UltronUserBot_support/19496
     cat = f"{jsonData['description']}"
     msg += " __" + re.sub("<br>", "\n", cat) + "__"
     msg = re.sub("<b>", "__**", msg)

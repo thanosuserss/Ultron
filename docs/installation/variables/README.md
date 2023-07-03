@@ -4,7 +4,7 @@
 
 Variables are used to store configuration settings and temporary data during the execution of commands. They are defined in <mark style="color:green;">config.py</mark> file and can be customized by users.
 
-In catuserbot there is two types of variables: [<mark style="color:blue;">**Config Variables**</mark>](config-vars.md) & [<mark style="color:blue;">**Database Variables**</mark>](database-vars.md) , understanding how variables work is crucial for customizing the bot to specific needs.
+In UltronUserBot there is two types of variables: [<mark style="color:blue;">**Config Variables**</mark>](config-vars.md) & [<mark style="color:blue;">**Database Variables**</mark>](database-vars.md) , understanding how variables work is crucial for customizing the bot to specific needs.
 
 ## ≡  Where it save the data?
 

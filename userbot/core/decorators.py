@@ -1,4 +1,4 @@
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# CatUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# UltronUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # Copyright (C) 2020-2023 by TgCatUB@Github.
 
 # This file is part of: https://github.com/thanosuserss/Ultron
@@ -41,7 +41,7 @@ class check_owner:
             else:
                 HELP_TEXT = (
                     gvarstatus("HELP_TEXT")
-                    or "Only My Master can Access This !!\n\nDeploy your own Catuserbot."
+                    or "Only My Master can Access This !!\n\nDeploy your own UltronUserBot."
                 )
                 await c_q.answer(
                     HELP_TEXT,
