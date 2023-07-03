@@ -40,7 +40,7 @@ from ..helpers import progress, reply_id
 from ..helpers.functions import delete_conv
 from ..helpers.functions.utube import _mp3Dl, get_yt_video_id, get_ytthumb, ytsearch
 from ..helpers.utils import _format
-from . import catub
+from . import ultronub
 
 BASE_YT_URL = "https://www.youtube.com/watch?v="
 extractor = URLExtract()
@@ -153,7 +153,7 @@ async def fix_attributes(
     return new_attributes, mime_type
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="yta(?:\s|$)([\s\S]*)",
     command=("yta", plugin_category),
     info={
@@ -239,7 +239,7 @@ async def download_audio(event):  # sourcery skip: low-code-quality
     await catevent.delete()
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="ytv(?:\s|$)([\s\S]*)",
     command=("ytv", plugin_category),
     info={
@@ -311,7 +311,7 @@ async def download_video(event):
     await event.delete()
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="insta(?: |$)([\s\S]*)",
     command=("insta", plugin_category),
     info={
@@ -344,7 +344,7 @@ async def insta_dl(event):
         try:
             v1_flag = await conv.send_message("/start")
         except YouBlockedUserError:
-            await catub(unblock("Fullsavebot"))
+            await ultronub(unblock("Fullsavebot"))
             v1_flag = await conv.send_message("/start")
         checker = await conv.get_response()
         await event.client.send_read_acknowledge(conv.chat_id)
@@ -382,7 +382,7 @@ async def insta_dl(event):
             try:
                 v2_flag = await conv.send_message("/start")
             except YouBlockedUserError:
-                await catub(unblock("videomaniacbot"))
+                await ultronub(unblock("videomaniacbot"))
                 v2_flag = await conv.send_message("/start")
             await conv.get_response()
             await event.client.send_read_acknowledge(conv.chat_id)
@@ -404,7 +404,7 @@ async def insta_dl(event):
             await delete_conv(event, v2, v2_flag)
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="yts(?: |$)(\d*)? ?([\s\S]*)",
     command=("yts", plugin_category),
     info={

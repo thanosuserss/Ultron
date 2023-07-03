@@ -13,12 +13,12 @@ import requests
 
 from ..core.managers import edit_delete, edit_or_reply
 from ..helpers import reply_id, unsavegif
-from . import catub
+from . import ultronub
 
 plugin_category = "Extra"
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="gifs(?:\s|$)([\s\S]*)",
     command=("gifs", plugin_category),
     info={

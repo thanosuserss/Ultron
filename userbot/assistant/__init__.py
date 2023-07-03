@@ -7,7 +7,7 @@
 # Please see: https://github.com/thanosuserss/Ultron/blob/master/LICENSE
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
-from userbot import BOTLOG, BOTLOG_CHATID, catub
+from userbot import BOTLOG, BOTLOG_CHATID, ultronub
 
 from ..Config import Config
 from ..core.inlinebot import *

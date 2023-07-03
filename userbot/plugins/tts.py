@@ -18,7 +18,7 @@ from datetime import datetime
 
 from gtts import gTTS
 
-from userbot import catub
+from userbot import ultronub
 
 from ..core.managers import edit_delete, edit_or_reply
 from . import deEmojify, reply_id
@@ -26,7 +26,7 @@ from . import deEmojify, reply_id
 plugin_category = "utils"
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="tts(?:\s|$)([\s\S]*)",
     command=("tts", plugin_category),
     info={

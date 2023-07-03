@@ -13,7 +13,7 @@ from telethon.tl.functions.channels import EditBannedRequest
 from telethon.tl.types import ChatBannedRights
 from telethon.utils import get_display_name
 
-from userbot import catub
+from userbot import ultronub
 
 from ..core.managers import edit_or_reply
 from ..helpers.utils import _format
@@ -26,7 +26,7 @@ NO_ADMIN = "`I am not an admin nub nibba!`"
 NO_PERM = "`I don't have sufficient permissions! This is so sed. Alexa play despacito`"
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="tmute(?:\s|$)([\s\S]*)",
     command=("tmute", plugin_category),
     info={
@@ -113,7 +113,7 @@ async def tmuter(event):  # sourcery no-metrics
         return await catevent.edit(f"`{e}`")
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="tban(?:\s|$)([\s\S]*)",
     command=("tban", plugin_category),
     info={

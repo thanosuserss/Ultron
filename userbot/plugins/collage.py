@@ -9,7 +9,7 @@
 
 import os
 
-from userbot import Convert, catub
+from userbot import Convert, ultronub
 
 from ..core.managers import edit_delete, edit_or_reply
 from ..helpers import _catutils, meme_type, reply_id
@@ -17,7 +17,7 @@ from ..helpers import _catutils, meme_type, reply_id
 plugin_category = "utils"
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="collage(?:\s|$)([\s\S]*)",
     command=("collage", plugin_category),
     info={

@@ -21,7 +21,7 @@ from hachoir.parser import createParser
 from telethon.tl import types
 from telethon.utils import get_attributes
 
-from userbot import catub
+from userbot import ultronub
 
 from ..Config import Config
 from ..core.managers import edit_delete, edit_or_reply
@@ -137,7 +137,7 @@ async def upload(path, event, udir_event, catflag=None):  # sourcery no-metrics
         UPLOAD_.uploaded += 1
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="upload( -f)? ([\s\S]*)",
     command=("upload", plugin_category),
     info={

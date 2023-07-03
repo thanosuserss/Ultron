@@ -13,7 +13,7 @@ import re
 
 from validators.url import url
 
-from userbot import BOTLOG_CHATID, catub
+from userbot import BOTLOG_CHATID, ultronub
 
 from ..core.managers import edit_delete, edit_or_reply
 from ..helpers import config_helper as dBcof
@@ -68,8 +68,8 @@ async def reload_codebase():
             await _catutils.runcmd(f"mv ./TempCat/{file} ./")
         await _catutils.runcmd("pip3 install --no-cache-dir -r requirements.txt")
         await _catutils.runcmd("rm -rf TempCat")
-    if os.path.exists("catub.log"):
-        os.remove("catub.log")
+    if os.path.exists("ultronub.log"):
+        os.remove("ultronub.log")
     if os.path.exists("badcatext"):
         await _catutils.runcmd("rm -rf badcatext")
     if os.path.exists("xtraplugins"):
@@ -78,7 +78,7 @@ async def reload_codebase():
         await _catutils.runcmd("rm -rf catvc")
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="(set|get|del|info) var(?:\s|$)([\s\S]*)",
     command=("var", plugin_category),
     info={
@@ -194,7 +194,7 @@ async def variable(event):
         await event.client.reload(cat)
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="(re|clean)load$",
     command=("reload", plugin_category),
     info={

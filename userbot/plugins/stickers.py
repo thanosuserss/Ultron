@@ -34,7 +34,7 @@ from telethon.tl.types import (
     InputStickerSetID,
 )
 
-from userbot import Convert, catub
+from userbot import Convert, ultronub
 
 from ..core.managers import edit_delete, edit_or_reply
 from ..helpers.functions import crop_and_divide
@@ -107,7 +107,7 @@ async def delpack(catevent, conv, args, packname):
     try:
         await conv.send_message("/delpack")
     except YouBlockedUserError:
-        await catub(unblock("stickers"))
+        await ultronub(unblock("stickers"))
         await conv.send_message("/delpack")
     await conv.get_response()
     await args.client.send_read_acknowledge(conv.chat_id)
@@ -161,7 +161,7 @@ async def newpacksticker(
     try:
         await conv.send_message(cmd)
     except YouBlockedUserError:
-        await catub(unblock("stickers"))
+        await ultronub(unblock("stickers"))
         await conv.send_message(cmd)
     await conv.get_response()
     await args.client.send_read_acknowledge(conv.chat_id)
@@ -219,7 +219,7 @@ async def add_to_pack(
     try:
         await conv.send_message("/addsticker")
     except YouBlockedUserError:
-        await catub(unblock("stickers"))
+        await ultronub(unblock("stickers"))
         await conv.send_message("/addsticker")
     await conv.get_response()
     await args.client.send_read_acknowledge(conv.chat_id)
@@ -276,7 +276,7 @@ async def add_to_pack(
     return (pack, packname) if pkang else (None, packname, emoji)
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="kang(?:\s|$)([\s\S]*)",
     command=("kang", plugin_category),
     info={
@@ -466,7 +466,7 @@ async def kang(args):  # sourcery no-metrics  # sourcery skip: low-code-quality
             )
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="pkang(?:\s|$)([\s\S]*)",
     command=("pkang", plugin_category),
     info={
@@ -666,7 +666,7 @@ async def pack_kang(event):  # sourcery no-metrics
     await catevent.edit(result)
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="vas$",
     command=("vas", plugin_category),
     info={
@@ -737,7 +737,7 @@ async def pussycat(event):
         os.remove(sticker[1])
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="gridpack(?:\s|$)([\s\S]*)",
     command=("gridpack", plugin_category),
     info={
@@ -806,7 +806,7 @@ async def pic2packcmd(event):
         try:
             await event.client.send_message(chat, "/cancel")
         except YouBlockedUserError:
-            await catub(unblock("stickers"))
+            await ultronub(unblock("stickers"))
             await event.client.send_message(chat, "/cancel")
         await conv.wait_event(events.NewMessage(incoming=True, from_users=chat))
         await event.client.send_message(chat, "/newpack")
@@ -843,7 +843,7 @@ async def pic2packcmd(event):
         )
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="stkrinfo$",
     command=("stkrinfo", plugin_category),
     info={
@@ -898,7 +898,7 @@ async def get_pack_info(event):
     await catevent.edit(OUTPUT)
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="stickers ?([\s\S]*)",
     command=("stickers", plugin_category),
     info={

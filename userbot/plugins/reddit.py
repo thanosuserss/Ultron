@@ -15,7 +15,7 @@
 
 import requests
 
-from userbot import catub
+from userbot import ultronub
 
 from ..core.logger import logging
 from ..core.managers import edit_delete
@@ -29,7 +29,7 @@ API = "https://meme-api.herokuapp.com/gimme"
 plugin_category = "misc"
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="reddit(?:\s|$)([\s\S]*)",
     command=("reddit", plugin_category),
     info={

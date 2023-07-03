@@ -7,7 +7,7 @@
 # Please see: https://github.com/thanosuserss/Ultron/blob/master/LICENSE
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
-FROM catub/core:bullseye
+FROM ultronub/core:bullseye
 
 # Working directory 
 WORKDIR /userbot

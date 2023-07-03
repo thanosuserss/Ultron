@@ -16,7 +16,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 from ..helpers import ellipse_create, file_check
 from ..helpers.utils import reply_id
-from . import catub, edit_delete, edit_or_reply
+from . import ultronub, edit_delete, edit_or_reply
 
 plugin_category = "utils"
 
@@ -36,7 +36,7 @@ def text_draw(font_name, font_size, img, text, width, hight, fill="white"):
     )
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="app ([\s\S]*)",
     command=("app", plugin_category),
     info={

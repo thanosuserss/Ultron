@@ -22,7 +22,7 @@ from telethon.errors.rpcerrorlist import (
 )
 from telethon.events import CallbackQuery
 
-from userbot import StartTime, catub, catversion
+from userbot import StartTime, ultronub, catversion
 
 from ..Config import Config
 from ..core.managers import edit_or_reply
@@ -34,7 +34,7 @@ from . import mention
 plugin_category = "utils"
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="alive$",
     command=("alive", plugin_category),
     info={
@@ -113,7 +113,7 @@ def catalive_text():
     return cat_caption
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="ialive$",
     command=("ialive", plugin_category),
     info={
@@ -132,7 +132,7 @@ async def amireallyalive(event):
     await event.delete()
 
 
-@catub.tgbot.on(CallbackQuery(data=re.compile(b"stats")))
+@ultronub.tgbot.on(CallbackQuery(data=re.compile(b"stats")))
 async def on_plug_in_callback_query_handler(event):
     statstext = await catalive(StartTime)
     await event.answer(statstext, cache_time=0, alert=True)

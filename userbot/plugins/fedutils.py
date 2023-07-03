@@ -13,7 +13,7 @@ import contextlib
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.contacts import UnblockRequest as unblock
 
-from userbot import BOTLOG, BOTLOG_CHATID, catub
+from userbot import BOTLOG, BOTLOG_CHATID, ultronub
 
 from ..Config import Config
 from ..core.logger import logging
@@ -36,7 +36,7 @@ fbanresults = [
 unfbanresults = ["I'll give", "Un-FedBan", "un-FedBan"]
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="fban(?:\s|$)([\s\S]*)",
     command=("fban", plugin_category),
     info={
@@ -122,7 +122,7 @@ async def group_fban(event):
     await edit_or_reply(catevent, success_report)
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="unfban(?:\s|$)([\s\S]*)",
     command=("unfban", plugin_category),
     info={
@@ -208,7 +208,7 @@ async def group_unfban(event):
     await edit_or_reply(catevent, success_report)
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="addfedto (\w+|-all) ([-\w]+)",
     command=("addfedto", plugin_category),
     info={
@@ -240,7 +240,7 @@ async def quote_search(event):  # sourcery no-metrics
                 try:
                     await conv.send_message("/myfeds")
                 except YouBlockedUserError:
-                    await catub(unblock("MissRose_bot"))
+                    await ultronub(unblock("MissRose_bot"))
                     await conv.send_message("/myfeds")
                 await asyncio.sleep(2)
                 try:
@@ -324,7 +324,7 @@ async def quote_search(event):  # sourcery no-metrics
         )
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="rmfedfrom (\w+|-all) ([-\w]+)",
     command=("rmfedfrom", plugin_category),
     info={
@@ -390,7 +390,7 @@ async def quote_search(event):
         )
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="listfed(s)?(?:\s|$)([\s\S]*)",
     command=("listfed", plugin_category),
     info={
@@ -436,7 +436,7 @@ async def quote_search(event):
     await edit_or_reply(event, output)
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="f(ed)?info(?:\s|$)([\s\S]*)",
     command=("fedinfo", plugin_category),
     info={
@@ -458,7 +458,7 @@ async def fetch_fedinfo(event):
             try:
                 await conv.send_message(f"/fedinfo {input_str}")
             except YouBlockedUserError:
-                await catub(unblock("MissRose_bot"))
+                await ultronub(unblock("MissRose_bot"))
                 await conv.send_message(f"/fedinfo {input_str}")
             response = await conv.get_response()
             await edit_or_reply(catevent, response.text)
@@ -470,7 +470,7 @@ async def fetch_fedinfo(event):
         conv.cancel()
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="f(ed)?admins(?:\s|$)([\s\S]*)",
     command=("fadmins", plugin_category),
     info={
@@ -492,7 +492,7 @@ async def fetch_fedinfo(event):
             try:
                 await conv.send_message(f"/fedadmins {input_str}")
             except YouBlockedUserError:
-                await catub(unblock("MissRose_bot"))
+                await ultronub(unblock("MissRose_bot"))
                 await conv.send_message(f"/fedadmins {input_str}")
             response = await conv.get_response()
             await edit_or_reply(
@@ -509,7 +509,7 @@ async def fetch_fedinfo(event):
         conv.cancel()
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="myfeds$",
     command=("myfeds", plugin_category),
     info={
@@ -526,7 +526,7 @@ async def myfeds_fedinfo(event):
             try:
                 await conv.send_message("/myfeds")
             except YouBlockedUserError:
-                await catub(unblock("MissRose_bot"))
+                await ultronub(unblock("MissRose_bot"))
                 await conv.send_message("/myfeds")
             response = await conv.get_response()
             if "can only" in response.text:
@@ -553,7 +553,7 @@ async def myfeds_fedinfo(event):
         conv.cancel()
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="f(ed)?stat(?:\s|$)([\s\S]*)",
     command=("fstat", plugin_category),
     info={
@@ -583,7 +583,7 @@ async def fstat_rose(event):
             try:
                 await conv.send_message(f"/fedstat {str(user.id)} {fedid.strip()}")
             except YouBlockedUserError:
-                await catub(unblock("MissRose_bot"))
+                await ultronub(unblock("MissRose_bot"))
                 await conv.send_message(f"/fedstat {str(user.id)} {fedid.strip()}")
             response = await conv.get_response()
             await event.client.send_read_acknowledge(conv.chat_id)

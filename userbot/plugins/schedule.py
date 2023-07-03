@@ -15,7 +15,7 @@ from datetime import datetime
 
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 
-from userbot import BOTLOG_CHATID, catub
+from userbot import BOTLOG_CHATID, ultronub
 
 from ..core.managers import edit_delete, edit_or_reply
 from ..sql_helper import broadcast_sql as bcast
@@ -26,7 +26,7 @@ logging.getLogger("apscheduler").setLevel(logging.WARNING)
 plugin_category = "tools"
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="(auto|)schedule(?:\s|$)([\s\S]*)",
     command=("schedule", plugin_category),
     info={
@@ -71,7 +71,7 @@ async def schedule(event):
                 with contextlib.suppress(ValueError):
                     item = int(item)
                 with contextlib.suppress(ValueError, IndexError):
-                    user = await catub.get_entity(item)
+                    user = await ultronub.get_entity(item)
                     user_list.append(user.id)
         if not user_list:
             return await edit_delete(
@@ -89,7 +89,7 @@ async def schedule(event):
                 return await edit_delete(
                     event, "__Its not a time machine to send message in the past__"
                 )
-        logged = await catub.send_message(BOTLOG_CHATID, reply)
+        logged = await ultronub.send_message(BOTLOG_CHATID, reply)
         message = {"chat": logged.chat_id, "msg_id": logged.id}
         sql.add_message_to_database(user_list, message, scheduled_time, daytime)
         await edit_delete(event, "__Task added to database__")
@@ -97,7 +97,7 @@ async def schedule(event):
         await edit_delete(event, f"**Error:** `{err}`", 30)
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="autoschedule$",
     command=("autoschedule", plugin_category),
     info={
@@ -123,7 +123,7 @@ async def autoschedule(event):
     "Autoschedule message in loop"
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="myschedule(?:\s|$)([\s\S]*)",
     command=("myschedule", plugin_category),
     info={

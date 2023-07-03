@@ -13,7 +13,7 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl import types
 from telethon.tl.functions.contacts import UnblockRequest as unblock
 
-from userbot import catub
+from userbot import ultronub
 
 from ..core.managers import edit_delete, edit_or_reply
 from ..helpers import _format, sanga_seperator
@@ -22,7 +22,7 @@ from ..helpers.utils import _format
 plugin_category = "utils"
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="sg(|u)(?:\s|$)([\s\S]*)",
     command=("sg", plugin_category),
     info={
@@ -50,7 +50,7 @@ async def sangmata(event):
             "`Reply to  user's text message to get name/username history or give userid/username`",
         )
 
-    userinfo = await catub.get_entity(user)
+    userinfo = await ultronub.get_entity(user)
     if not isinstance(userinfo, types.User):
         return await edit_delete(event, "`Can't fetch the user...`")
 
@@ -59,7 +59,7 @@ async def sangmata(event):
         try:
             await conv.send_message(userinfo.id)
         except YouBlockedUserError:
-            await catub(unblock("SangMata_beta_bot"))
+            await ultronub(unblock("SangMata_beta_bot"))
             await conv.send_message(userinfo.id)
         responses = []
         while True:

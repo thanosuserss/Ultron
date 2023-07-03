@@ -11,14 +11,14 @@ import re
 
 from ..Config import Config
 from ..core.managers import edit_or_reply
-from . import LyricsGen, catub
+from . import LyricsGen, ultronub
 
 GENIUS = Config.GENIUS_API_TOKEN
 
 plugin_category = "extra"
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="lyrics(?:\s|$)([\s\S]*)",
     command=("lyrics", plugin_category),
     info={

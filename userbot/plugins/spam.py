@@ -18,7 +18,7 @@ from telethon.tl.functions.messages import GetStickerSetRequest
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 from telethon.utils import get_display_name
 
-from userbot import catub
+from userbot import ultronub
 
 from ..core.managers import edit_delete, edit_or_reply
 from ..helpers import media_type, unsavegif
@@ -123,7 +123,7 @@ async def spam_function(event, sandy, cat, sleeptimem, sleeptimet, DelaySpam=Fal
             )
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="spam ([\s\S]*)",
     command=("spam", plugin_category),
     info={
@@ -155,7 +155,7 @@ async def spammer(event):
     await spam_function(event, sandy, cat, sleeptimem, sleeptimet)
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="spspam$",
     command=("spspam", plugin_category),
     info={
@@ -234,7 +234,7 @@ async def stickerpack_spam(event):
         await event.client.send_file(BOTLOG_CHATID, reqd_sticker_set.documents[0])
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="cspam ([\s\S]*)",
     command=("cspam", plugin_category),
     info={
@@ -269,7 +269,7 @@ async def tmeme(event):
             )
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="wspam ([\s\S]*)",
     command=("wspam", plugin_category),
     info={
@@ -304,7 +304,7 @@ async def tmeme(event):
             )
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="(delayspam|dspam) ([\s\S]*)",
     command=("delayspam", plugin_category),
     info={
@@ -339,7 +339,7 @@ async def spammer(event):
     await spam_function(event, reply, cat, sleeptimem, sleeptimet, DelaySpam=True)
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="(r(eact)?spam$)",
     command=("rspam", plugin_category),
     info={

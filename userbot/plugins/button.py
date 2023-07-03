@@ -14,7 +14,7 @@ from telethon import Button
 
 from ..Config import Config
 from ..helpers.functions.functions import make_inline
-from . import catub, edit_delete, reply_id
+from . import ultronub, edit_delete, reply_id
 
 plugin_category = "tools"
 # regex obtained from:
@@ -64,7 +64,7 @@ def inline_button_aricle(method):
     return (text, buttons, media)
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="ibutton(?:\s|$)([\s\S]*)",
     command=("ibutton", plugin_category),
     info={
@@ -92,7 +92,7 @@ async def _(event):
     await event.delete()
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="cbutton(?:\s|$)([\s\S]*)",
     command=("cbutton", plugin_category),
     info={

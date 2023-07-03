@@ -15,7 +15,7 @@ from pytz import country_names as c_n
 from pytz import country_timezones as c_tz
 from pytz import timezone as tz
 
-from userbot import catub
+from userbot import ultronub
 
 from ..Config import Config
 from ..core.managers import edit_or_reply
@@ -51,7 +51,7 @@ async def get_tz(con):
         return
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="time(?:\s|$)([\s\S]*)(?<![0-9])(?: |$)([0-9]+)?",
     command=("time", plugin_category),
     info={
@@ -118,7 +118,7 @@ async def time_func(tdata):
         )
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="(s|p|c)time(?:\s|$)([\s\S]*)",
     command=("stime", plugin_category),
     info={

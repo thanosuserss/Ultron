@@ -11,14 +11,14 @@
 from PIL import Image, ImageFilter, UnidentifiedImageError
 
 from ..core.managers import edit_delete, edit_or_reply
-from . import catub, reply_id
+from . import ultronub, reply_id
 
 plugin_category = "extra"
 
 name = "Profile Photos"
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="poto(?:\s|$)([\s\S]*)",
     command=("poto", plugin_category),
     info={
@@ -86,7 +86,7 @@ async def potocmd(event):
     await event.delete()
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="blur(?:\s|$)([\s\S]*)",
     command=("blur", plugin_category),
     info={

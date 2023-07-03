@@ -24,7 +24,7 @@ from telethon.errors import PhotoInvalidDimensionsError
 from telethon.tl.functions.messages import SendMediaRequest
 from telethon.utils import get_attributes
 
-from userbot import Convert, catub
+from userbot import Convert, ultronub
 
 from ..Config import Config
 from ..core.managers import edit_delete, edit_or_reply
@@ -52,7 +52,7 @@ PATH = os.path.join("./temp", "temp_vid.mp4")
 thumb_loc = os.path.join(Config.TMP_DOWNLOAD_DIRECTORY, "thumb_image.jpg")
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="spin(?: |$)((-)?(s)?)$",
     command=("spin", plugin_category),
     info={
@@ -148,7 +148,7 @@ async def pic_gifcmd(event):  # sourcery no-metrics
             os.remove(i)
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="circle ?((-)?s)?$",
     command=("circle", plugin_category),
     info={
@@ -301,7 +301,7 @@ async def video_catfile(event):  # sourcery no-metrics
     await catevent.delete()
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="(stoi|mtoi)$",
     command=("mtoi", plugin_category),
     info={
@@ -333,7 +333,7 @@ async def _(event):
     await output[0].delete()
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="itos$",
     command=("itos", plugin_category),
     info={
@@ -369,7 +369,7 @@ async def _(event):
     await output[0].delete()
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="ttf ([\s\S]*)",
     command=("ttf", plugin_category),
     info={
@@ -395,7 +395,7 @@ async def get(event):
         await edit_or_reply(event, "reply to text message as `.ttf <file name>`")
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="ftt$",
     command=("ftt", plugin_category),
     info={
@@ -443,7 +443,7 @@ async def get(event):
         os.remove(file_loc)
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="ftoi$",
     command=("ftoi", plugin_category),
     info={
@@ -484,7 +484,7 @@ async def on_file_to_photo(event):
     await catt.delete()
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="(gif|vtog)$",
     command=("gif", plugin_category),
     info={
@@ -532,7 +532,7 @@ async def _(event):  # sourcery no-metrics
             os.remove(files)
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="nfc (mp3|voice)",
     command=("nfc", plugin_category),
     info={
@@ -643,7 +643,7 @@ async def _(event):
             await event.delete()
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="itog(?: |$)((-)?(r|l|u|d|s|i)?)$",
     command=("itog", plugin_category),
     info={

@@ -12,7 +12,7 @@ from time import time
 
 import speedtest
 
-from userbot import catub
+from userbot import ultronub
 
 from ..core.managers import edit_or_reply
 from ..helpers.utils import reply_id
@@ -30,7 +30,7 @@ def convert_from_bytes(size):
     return f"{round(size, 2)} {units[n]}"
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="speedtest(?:\s|$)([\s\S]*)",
     command=("speedtest", plugin_category),
     info={

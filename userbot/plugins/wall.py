@@ -13,7 +13,7 @@ import random
 import requests
 from bs4 import BeautifulSoup
 
-from userbot import catub
+from userbot import ultronub
 
 from ..core.logger import logging
 from ..core.managers import edit_delete, edit_or_reply
@@ -24,7 +24,7 @@ LOGS = logging.getLogger(os.path.basename(__name__))
 plugin_category = "extra"
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="wall(?:\s|$)([\s\S]*)",
     command=("wall", plugin_category),
     info={

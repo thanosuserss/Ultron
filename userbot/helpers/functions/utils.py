@@ -56,9 +56,9 @@ async def get_readable_time(seconds: int) -> str:
 # gban
 
 
-async def admin_groups(catub):
+async def admin_groups(ultronub):
     catgroups = []
-    async for dialog in catub.iter_dialogs():
+    async for dialog in ultronub.iter_dialogs():
         entity = dialog.entity
         if (
             isinstance(entity, Channel)

@@ -23,7 +23,7 @@ from PIL import Image, ImageColor
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.contacts import UnblockRequest as unblock
 
-from userbot import catub
+from userbot import ultronub
 
 from ..Config import Config
 from ..core.logger import logging
@@ -38,7 +38,7 @@ plugin_category = "tools"
 LOGS = logging.getLogger(__name__)
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="cur(?:\s|$)([\s\S]*)",
     command=("cur", plugin_category),
     info={
@@ -97,7 +97,7 @@ async def currency(event):
         )
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="scan( -i)?$",
     command=("scan", plugin_category),
     info={
@@ -122,7 +122,7 @@ async def scan(event):
             await edit_or_reply(
                 catevent, "**Error:** Trying to unblock & retry, wait a sec..."
             )
-            await catub(unblock("VS_Robot"))
+            await ultronub(unblock("VS_Robot"))
             flag = await conv.send_message("/start")
         await conv.get_response()
         await conv.send_message(reply_message)
@@ -147,7 +147,7 @@ async def scan(event):
         await delete_conv(event, chat, flag)
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="decode$",
     command=("decode", plugin_category),
     info={
@@ -177,7 +177,7 @@ async def parseqr(event):
         await edit_or_reply(catevent, f"**Error:**\n`{e}`")
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="barcode ?([\s\S]*)",
     command=("barcode", plugin_category),
     info={
@@ -229,7 +229,7 @@ async def _(event):
     await edit_delete(catevent, f"Created BarCode in {ms} seconds")
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="makeqr(?: |$)([\s\S]*)",
     command=("makeqr", plugin_category),
     info={
@@ -273,7 +273,7 @@ async def make_qr(makeqr):
     await makeqr.delete()
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="cal ([\s\S]*)",
     command=("cal", plugin_category),
     info={
@@ -298,7 +298,7 @@ async def _(event):
         await edit_delete(event, f"**Error:**\n`{e}`", 5)
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="ip(?:\s|$)([\s\S]*)",
     command=("ip", plugin_category),
     info={
@@ -384,7 +384,7 @@ async def spy(event):
     await edit_or_reply(event, string, parse_mode="html")
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="ifsc ([\s\S]*)",
     command=("ifsc", plugin_category),
     info={
@@ -406,7 +406,7 @@ async def _(event):
     await edit_or_reply(event, a)
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="color ([\s\S]*)",
     command=("color", plugin_category),
     info={
@@ -442,7 +442,7 @@ async def _(event):
         await event.delete()
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="xkcd(?:\s|$)([\s\S]*)",
     command=("xkcd", plugin_category),
     info={

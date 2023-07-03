@@ -17,7 +17,7 @@ import re
 import time
 from datetime import datetime
 
-from userbot import catub
+from userbot import ultronub
 from userbot.core.logger import logging
 
 from ..Config import Config
@@ -123,7 +123,7 @@ async def cult_small_video(
     return out_put_file_name if os.path.lexists(out_put_file_name) else None
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="(|f)compress(?:\s|$)([\s\S]*)",
     command=("compress", plugin_category),
     info={
@@ -193,7 +193,7 @@ async def ffmpeg_compress(event):  # sourcery skip: low-code-quality
         os.mkdir("./temp")
     cstart = datetime.now()
     compress = await convert_video(
-        dlpath, "./temp", crf, old["duration"], catub, catevent
+        dlpath, "./temp", crf, old["duration"], ultronub, catevent
     )
     cend = datetime.now()
     cms = (cend - cstart).seconds
@@ -251,7 +251,7 @@ async def ffmpeg_compress(event):  # sourcery skip: low-code-quality
     await edit_or_reply(catt, cap)
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="ffmpegsave(?:\s|$)([\s\S]*)",
     command=("ffmpegsave", plugin_category),
     info={
@@ -316,7 +316,7 @@ async def ff_mpeg_trim_cmd(event):
         )
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="vtrim(?:\s|$)([\s\S]*)",
     command=("vtrim", plugin_category),
     info={
@@ -402,7 +402,7 @@ async def ff_mpeg_trim_cmd(event):
     await edit_delete(catevent, f"`Completed Process in {ms} seconds`", 3)
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="atrim(?:\s|$)([\s\S]*)",
     command=("atrim", plugin_category),
     info={
@@ -467,7 +467,7 @@ async def ff_mpeg_trim_cmd(event):
     await edit_delete(catevent, f"`Completed Process in {ms} seconds`", 3)
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="ffmpegclear$",
     command=("ffmpegclear", plugin_category),
     info={

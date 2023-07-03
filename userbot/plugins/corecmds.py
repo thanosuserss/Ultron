@@ -15,7 +15,7 @@ from ..Config import Config
 from ..core import CMD_INFO, PLG_INFO
 from ..helpers.google_tools import chromeDriver
 from ..utils import load_module, remove_plugin
-from . import CMD_HELP, CMD_LIST, SUDO_LIST, catub, edit_delete, edit_or_reply, reply_id
+from . import CMD_HELP, CMD_LIST, SUDO_LIST, ultronub, edit_delete, edit_or_reply, reply_id
 
 plugin_category = "tools"
 
@@ -34,7 +34,7 @@ def plug_checker(plugin):
     return plug_path
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="install(?:\s|$)([\s\S]*)",
     command=("install", plugin_category),
     info={
@@ -71,7 +71,7 @@ async def install(event):
             os.remove(downloaded_file_name)
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="load(?:\s|$)([\s\S]*)",
     command=("load", plugin_category),
     info={
@@ -95,7 +95,7 @@ async def load(event):
         )
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="send(?:\s|$)([\s\S]*)",
     command=("send", plugin_category),
     info={
@@ -125,7 +125,7 @@ async def send(event):
         await edit_or_reply(event, "404: File Not Found")
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="unload(?:\s|$)([\s\S]*)",
     command=("unload", plugin_category),
     info={
@@ -145,7 +145,7 @@ async def unload(event):
         await edit_or_reply(event, f"Successfully unload {shortname}\n{e}")
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="uninstall(?:\s|$)([\s\S]*)",
     command=("uninstall", plugin_category),
     info={
@@ -182,11 +182,11 @@ async def unload(event):
         PLG_INFO.pop(shortname)
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="logs(?:\s|$)([\s\S]*)",
     command=("logs", plugin_category),
     info={
-        "header": "To send the log of catub",
+        "header": "To send the log of ultronub",
         "description": "Send the log by paste or text file or rayso image. If no flag is used then it will paste last 100 lines of log.",
         "flags": {
             "f": "will fetch the whole log",
@@ -214,7 +214,7 @@ async def app_log(event):
     if flag and (flag[0] != "-" or any(i not in ["-", "f", "r", "t"] for i in flag)):
         return await edit_delete(event, "**Invalid flag...**")
 
-    with open("catub.log", "r") as file:
+    with open("ultronub.log", "r") as file:
         if "f" in flag:
             log = file.read()
             linktext = "**Full logs: **"
@@ -227,7 +227,7 @@ async def app_log(event):
     elif "r" in flag:
         outfile, error = chromeDriver.get_rayso(log, file_name="logs.png")
         if outfile:
-            await catub.send_file(
+            await ultronub.send_file(
                 event.chat_id, outfile, caption=linktext, force_document=True
             )
             return os.remove(outfile)

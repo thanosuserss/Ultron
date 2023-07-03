@@ -18,7 +18,7 @@ from ..Config import Config
 from ..core import LOADED_CMDS, PLG_INFO
 from ..core.logger import logging
 from ..core.managers import edit_delete, edit_or_reply
-from ..core.session import catub
+from ..core.session import ultronub
 from ..helpers.utils import _catutils, _format, install_pip, reply_id
 from .decorators import admin_cmd, sudo_cmd
 
@@ -40,7 +40,7 @@ def load_module(shortname, plugin_path=None):
         checkplugins(path)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
-        mod.bot = catub
+        mod.bot = ultronub
         mod.LOGS = LOGS
         mod.Config = Config
         mod._format = _format
@@ -53,9 +53,9 @@ def load_module(shortname, plugin_path=None):
         mod.install_pip = install_pip
         mod.parse_pre = _format.parse_pre
         mod.edit_or_reply = edit_or_reply
-        mod.tgbot = catub.tgbot
+        mod.tgbot = ultronub.tgbot
         mod.logger = logging.getLogger(shortname)
-        mod.borg = catub
+        mod.borg = ultronub
         spec.loader.exec_module(mod)
         # for imports
         sys.modules[f"userbot.plugins.{shortname}"] = mod
@@ -82,21 +82,21 @@ def remove_plugin(shortname):
         for cmdname in cmd:
             if cmdname in LOADED_CMDS:
                 for i in LOADED_CMDS[cmdname]:
-                    catub.remove_event_handler(i)
+                    ultronub.remove_event_handler(i)
                 del LOADED_CMDS[cmdname]
         return True
     except Exception as e:
         LOGS.error(e)
     with contextlib.suppress(BaseException):
         for i in LOAD_PLUG[shortname]:
-            catub.remove_event_handler(i)
+            ultronub.remove_event_handler(i)
         del LOAD_PLUG[shortname]
     try:
         name = f"userbot.plugins.{shortname}"
-        for i in reversed(range(len(catub._event_builders))):
-            ev, cb = catub._event_builders[i]
+        for i in reversed(range(len(ultronub._event_builders))):
+            ev, cb = ultronub._event_builders[i]
             if cb.__module__ == name:
-                del catub._event_builders[i]
+                del ultronub._event_builders[i]
     except BaseException as exc:
         raise ValueError from exc
 

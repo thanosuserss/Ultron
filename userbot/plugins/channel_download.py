@@ -17,12 +17,12 @@ import subprocess
 
 from ..Config import Config
 from ..helpers.tools import media_type
-from . import catub, edit_or_reply
+from . import ultronub, edit_or_reply
 
 plugin_category = "tools"
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="getc(?:\s|$)([\s\S]*)",
     command=("getc", plugin_category),
     info={
@@ -62,7 +62,7 @@ async def get_media(event):
     )
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="geta(?:\s|$)([\s\S]*)",
     command=("geta", plugin_category),
     info={

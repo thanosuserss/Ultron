@@ -10,7 +10,7 @@
 
 import os
 
-from userbot import catub
+from userbot import ultronub
 
 from ..core.managers import edit_delete, edit_or_reply
 from ..helpers.chatbot import (
@@ -29,7 +29,7 @@ MODELS = ["gpt-3.5-turbo", "gpt-3.5-turbo-0301"]
 SIZE = ["256", "512", "1024"]
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="gpt(?:\s|$)([\s\S]*)",
     command=("gpt", plugin_category),
     info={
@@ -119,7 +119,7 @@ async def gpt_response_with_prompt(event):
     await edit_or_reply(catevent, gpt_response)
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="dalle(?:\s|$)([\s\S]*)",
     command=("dalle", plugin_category),
     info={

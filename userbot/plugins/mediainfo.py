@@ -10,7 +10,7 @@
 import contextlib
 import os
 
-from userbot import catub
+from userbot import ultronub
 from userbot.core.logger import logging
 
 from ..Config import Config
@@ -60,7 +60,7 @@ async def file_data(reply):
     return hmm
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="minfo$",
     command=("minfo", plugin_category),
     info={

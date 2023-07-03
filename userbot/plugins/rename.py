@@ -12,7 +12,7 @@ import os
 import time
 from datetime import datetime
 
-from userbot import catub
+from userbot import ultronub
 
 from ..Config import Config
 from ..core.managers import edit_delete, edit_or_reply
@@ -24,7 +24,7 @@ plugin_category = "utils"
 thumb_image_path = os.path.join(Config.TMP_DOWNLOAD_DIRECTORY, "thumb_image.jpg")
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="rnup ?(-f)? ([\s\S]*)",
     command=("rnup", plugin_category),
     info={

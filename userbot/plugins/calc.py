@@ -11,12 +11,12 @@ import io
 import sys
 import traceback
 
-from . import catub, edit_or_reply
+from . import ultronub, edit_or_reply
 
 plugin_category = "utils"
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="calc ([\s\S]*)",
     command=("calc", plugin_category),
     info={

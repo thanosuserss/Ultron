@@ -34,7 +34,7 @@ from ..sql_helper.global_list import (
     rm_from_list,
 )
 from ..sql_helper.globals import addgvar, delgvar, gvarstatus
-from . import BOTLOG, BOTLOG_CHATID, _catutils, catub, edit_delete, logging
+from . import BOTLOG, BOTLOG_CHATID, _catutils, ultronub, edit_delete, logging
 
 plugin_category = "tools"
 
@@ -78,7 +78,7 @@ async def autopicloop():
     AUTOPICSTART = gvarstatus("autopic") == "true"
     if AUTOPICSTART and DEFAULT_PIC is None:
         if BOTLOG:
-            return await catub.send_message(
+            return await ultronub.send_message(
                 BOTLOG_CHATID,
                 "**Error**\n`For functing of autopic you need to set DEFAULT_PIC var in Database vars`",
             )
@@ -103,9 +103,9 @@ async def autopicloop():
         fnt = ImageFont.truetype(FONT_FILE_TO_USE, 30)
         drawn_text.text((150, 250), current_time, font=fnt, fill=(124, 252, 0))
         img.save(autophoto_path)
-        file = await catub.upload_file(autophoto_path)
+        file = await ultronub.upload_file(autophoto_path)
         try:
-            await catub(functions.photos.UploadProfilePhotoRequest(file))
+            await ultronub(functions.photos.UploadProfilePhotoRequest(file))
             os.remove(autophoto_path)
             counter += counter
             await asyncio.sleep(CHANGE_TIME)
@@ -124,16 +124,16 @@ async def custompfploop():
             return
         pic = random.choice(list(get_collection_list("CUSTOM_PFP_LINKS")))
         urllib.request.urlretrieve(pic, "donottouch.jpg")
-        file = await catub.upload_file("donottouch.jpg")
+        file = await ultronub.upload_file("donottouch.jpg")
         try:
             if i > 0:
-                await catub(
+                await ultronub(
                     functions.photos.DeletePhotosRequest(
-                        await catub.get_profile_photos("me", limit=1)
+                        await ultronub.get_profile_photos("me", limit=1)
                     )
                 )
             i += 1
-            await catub(functions.photos.UploadProfilePhotoRequest(file))
+            await ultronub(functions.photos.UploadProfilePhotoRequest(file))
             os.remove("donottouch.jpg")
             await asyncio.sleep(CHANGE_TIME)
         except BaseException:
@@ -162,16 +162,16 @@ async def digitalpicloop():
         fnt = ImageFont.truetype(cat, 200)
         drawn_text.text((350, 100), current_time, font=fnt, fill=(124, 252, 0))
         img.save(autophoto_path)
-        file = await catub.upload_file(autophoto_path)
+        file = await ultronub.upload_file(autophoto_path)
         try:
             if i > 0:
-                await catub(
+                await ultronub(
                     functions.photos.DeletePhotosRequest(
-                        await catub.get_profile_photos("me", limit=1)
+                        await ultronub.get_profile_photos("me", limit=1)
                     )
                 )
             i += 1
-            await catub(functions.photos.UploadProfilePhotoRequest(file))
+            await ultronub(functions.photos.UploadProfilePhotoRequest(file))
             os.remove(autophoto_path)
             await asyncio.sleep(60)
         except BaseException:
@@ -184,7 +184,7 @@ async def bloom_pfploop():
     BLOOMSTART = gvarstatus("bloom") == "true"
     if BLOOMSTART and DEFAULT_PIC is None:
         if BOTLOG:
-            return await catub.send_message(
+            return await ultronub.send_message(
                 BOTLOG_CHATID,
                 "**Error**\n`For functing of bloom you need to set DEFAULT_PIC var in Database vars`",
             )
@@ -214,9 +214,9 @@ async def bloom_pfploop():
         drawn_text.text((95, 250), current_time, font=fnt, fill=(FR, FG, FB))
         drawn_text.text((95, 250), "      😈", font=ofnt, fill=(FR, FG, FB))
         img.save(autophoto_path)
-        file = await catub.upload_file(autophoto_path)
+        file = await ultronub.upload_file(autophoto_path)
         try:
-            await catub(functions.photos.UploadProfilePhotoRequest(file))
+            await ultronub(functions.photos.UploadProfilePhotoRequest(file))
             os.remove(autophoto_path)
             await asyncio.sleep(CHANGE_TIME)
         except BaseException:
@@ -232,7 +232,7 @@ async def autoname_loop():
         name = f"⌚️ {HM}||›  {DEFAULTUSER} ‹||📅 {DM}"
         LOGS.info(name)
         try:
-            await catub(functions.account.UpdateProfileRequest(first_name=name))
+            await ultronub(functions.account.UpdateProfileRequest(first_name=name))
         except FloodWaitError as ex:
             LOGS.warning(str(ex))
             await asyncio.sleep(ex.seconds)
@@ -247,7 +247,7 @@ async def autobio_loop():
         bio = f"📅 {DMY} | {DEFAULTUSERBIO} | ⌚️ {HM}"
         LOGS.info(bio)
         try:
-            await catub(functions.account.UpdateProfileRequest(about=bio))
+            await ultronub(functions.account.UpdateProfileRequest(about=bio))
         except FloodWaitError as ex:
             LOGS.warning(str(ex))
             await asyncio.sleep(ex.seconds)
@@ -282,21 +282,21 @@ async def autopfp_start():
     i = 0
     while AUTOPFP_START:
         await animeprofilepic(string_list)
-        file = await catub.upload_file("donottouch.jpg")
+        file = await ultronub.upload_file("donottouch.jpg")
         if i > 0:
-            await catub(
+            await ultronub(
                 functions.photos.DeletePhotosRequest(
-                    await catub.get_profile_photos("me", limit=1)
+                    await ultronub.get_profile_photos("me", limit=1)
                 )
             )
         i += 1
-        await catub(functions.photos.UploadProfilePhotoRequest(file))
+        await ultronub(functions.photos.UploadProfilePhotoRequest(file))
         await _catutils.runcmd("rm -rf donottouch.jpg")
         await asyncio.sleep(CHANGE_TIME)
         AUTOPFP_START = gvarstatus("autopfp_strings") is not None
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="batmanpfp$",
     command=("batmanpfp", plugin_category),
     info={
@@ -317,7 +317,7 @@ async def _(event):
     await autopfp_start()
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="thorpfp$",
     command=("thorpfp", plugin_category),
     info={
@@ -338,7 +338,7 @@ async def _(event):
     await autopfp_start()
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="autopic ?([\s\S]*)",
     command=("autopic", plugin_category),
     info={
@@ -385,7 +385,7 @@ async def _(event):
     await autopicloop()
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="digitalpfp$",
     command=("digitalpfp", plugin_category),
     info={
@@ -409,7 +409,7 @@ async def _(event):
     await digitalpicloop()
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="bloom$",
     command=("bloom", plugin_category),
     info={
@@ -441,7 +441,7 @@ async def _(event):
     await bloom_pfploop()
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="c(ustom)?pfp(?: |$)([\s\S]*)",
     command=("custompfp", plugin_category),
     info={
@@ -527,7 +527,7 @@ async def useless(event):  # sourcery no-metrics
         )
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="autoname$",
     command=("autoname", plugin_category),
     info={
@@ -546,7 +546,7 @@ async def _(event):
     await autoname_loop()
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="autobio$",
     command=("autobio", plugin_category),
     info={
@@ -565,7 +565,7 @@ async def _(event):
     await autobio_loop()
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="end ([\s\S]*)",
     command=("end", plugin_category),
     info={
@@ -684,10 +684,10 @@ async def _(event):  # sourcery no-metrics  # sourcery skip: low-code-quality
         )
 
 
-catub.loop.create_task(autopfp_start())
-catub.loop.create_task(autopicloop())
-catub.loop.create_task(digitalpicloop())
-catub.loop.create_task(bloom_pfploop())
-catub.loop.create_task(autoname_loop())
-catub.loop.create_task(autobio_loop())
-catub.loop.create_task(custompfploop())
+ultronub.loop.create_task(autopfp_start())
+ultronub.loop.create_task(autopicloop())
+ultronub.loop.create_task(digitalpicloop())
+ultronub.loop.create_task(bloom_pfploop())
+ultronub.loop.create_task(autoname_loop())
+ultronub.loop.create_task(autobio_loop())
+ultronub.loop.create_task(custompfploop())

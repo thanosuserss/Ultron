@@ -16,7 +16,7 @@ from datetime import datetime
 from search_engine_parser import BingSearch, GoogleSearch, YahooSearch
 from search_engine_parser.core.exceptions import NoResultsOrTrafficError
 
-from userbot import BOTLOG, BOTLOG_CHATID, Convert, catub
+from userbot import BOTLOG, BOTLOG_CHATID, Convert, ultronub
 
 from ..core.managers import edit_delete, edit_or_reply
 from ..helpers.functions import deEmojify, unsavegif
@@ -26,7 +26,7 @@ from ..helpers.utils import reply_id
 plugin_category = "tools"
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="gs ([\s\S]*)",
     command=("gs", plugin_category),
     info={
@@ -109,7 +109,7 @@ async def gsearch(q_event):
         )
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="gis ([\s\S]*)",
     command=("gis", plugin_category),
     info={
@@ -122,7 +122,7 @@ async def gis(event):
     "To search in google and send result in picture."
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="grs$",
     command=("grs", plugin_category),
     info={
@@ -135,7 +135,7 @@ async def grs(event):
     "Google Reverse Search"
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="(grs|reverse)(?:\s|$)([\s\S]*)",
     command=("reverse", plugin_category),
     info={
@@ -190,10 +190,10 @@ async def reverse(event):
             # scamming telethon to send media as album
             # gif file can't album so doing single
             try:
-                image = await catub.send_file(BOTLOG_CHATID, url, silent=True)
+                image = await ultronub.send_file(BOTLOG_CHATID, url, silent=True)
                 if url.endswith(".gif"):
                     await unsavegif(event, image)
-                    giflink = await catub.get_msg_link(image)
+                    giflink = await ultronub.get_msg_link(image)
                     gifstring += f'<b><a href="{giflink}">Gif{checker}</a></b>  '
                 elif not url.endswith(".gif"):
                     imagelist.append(image.media)
@@ -216,7 +216,7 @@ async def reverse(event):
         caption = caption + "\n\n<b>➥ Found Gif:</b>  " + gifstring
     captionlist[-1] = caption
     await catevent.delete()
-    await catub.send_file(
+    await ultronub.send_file(
         event.chat_id,
         imagelist,
         caption=captionlist,
@@ -227,7 +227,7 @@ async def reverse(event):
         os.remove(outfile)
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="google(?:\s|$)([\s\S]*)",
     command=("google", plugin_category),
     info={

@@ -17,7 +17,7 @@ from ..core.managers import edit_delete, edit_or_reply
 from ..helpers.functions import deEmojify, higlighted_text
 from ..helpers.tools import media_type
 from ..sql_helper.globals import addgvar, gvarstatus
-from . import BOTLOG, BOTLOG_CHATID, catub, reply_id
+from . import BOTLOG, BOTLOG_CHATID, ultronub, reply_id
 
 plugin_category = "tools"
 
@@ -213,7 +213,7 @@ def notebook_values(page, font):  # sourcery skip: low-code-quality
     return lines, text_wrap, font_size, linespace, position
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="(write|notebook)(?:\s|$)([\s\S]*)",
     command=("write", plugin_category),
     info={
@@ -251,7 +251,7 @@ async def write_page(event):  # sourcery skip: low-code-quality
         cap = None
     if cmd == "notebook":
         text = (
-            (await catub(GetFullUserRequest(catub.uid))).full_user
+            (await ultronub(GetFullUserRequest(ultronub.uid))).full_user
         ).about or "This is just a Sample text\n              -by UltronUserBot"
         cap = f"**NoteBook Configs :-**\n\n**Font:** `{font}`\n**Page:** `{list(Pages.keys())[list(Pages.values()).index(page)]}`\n**Color:** `{foreground.title()}`\n**Log:**  `{log}`"
     reply_to_id = await reply_id(event)
@@ -298,7 +298,7 @@ async def write_page(event):  # sourcery skip: low-code-quality
         os.remove(i)
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="notebook$",
     command=("notebook", plugin_category),
     info={
@@ -311,7 +311,7 @@ async def notebook(event):
     """Shows your notebook configs."""
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="nb(page|font|pen|log)(?:\s|$)([\s\S]*)",
     command=("nb", plugin_category),
     info={

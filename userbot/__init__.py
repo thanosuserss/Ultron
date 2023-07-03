@@ -15,7 +15,7 @@ import heroku3
 
 from .Config import Config
 from .core.logger import logging
-from .core.session import catub
+from .core.session import ultronub
 from .helpers.functions.converter import Convert
 from .helpers.functions.musictool import *
 from .helpers.utils.utils import runasync
@@ -26,10 +26,10 @@ __license__ = "GNU Affero General Public License v3.0"
 __author__ = "UltronUserBot <https://github.com/thanosuserss/Ultron>"
 __copyright__ = f"Copyright (C) 2020 - 2023  {__author__}"
 
-catub.version = __version__
-catub.tgbot.version = __version__
+ultronub.version = __version__
+ultronub.tgbot.version = __version__
 LOGS = logging.getLogger("UltronUserBot")
-bot = catub
+bot = ultronub
 
 StartTime = time.time()
 catversion = "3.3.0"
@@ -37,7 +37,7 @@ catversion = "3.3.0"
 
 def close_connection(*_):
     print("Closing Userbot connection.")
-    runasync(catub.disconnect())
+    runasync(ultronub.disconnect())
     sys.exit(143)
 
 

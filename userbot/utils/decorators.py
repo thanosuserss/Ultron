@@ -20,7 +20,7 @@ from ..Config import Config
 from ..core.data import _sudousers_list, blacklist_chats_list
 from ..core.events import MessageEdited, NewMessage
 from ..core.logger import logging
-from ..core.session import catub
+from ..core.session import ultronub
 from ..helpers.utils.format import paste_message
 from ..helpers.utils.utils import runcmd
 from ..sql_helper.globals import gvarstatus
@@ -223,8 +223,8 @@ def register(**args):
 
     def decorator(func):
         if not disable_edited:
-            catub.add_event_handler(func, MessageEdited(**args))
-        catub.add_event_handler(func, NewMessage(**args))
+            ultronub.add_event_handler(func, MessageEdited(**args))
+        ultronub.add_event_handler(func, NewMessage(**args))
         try:
             LOAD_PLUG[file_test].append(func)
         except Exception:
@@ -272,8 +272,8 @@ def command(**args):
 
     def decorator(func):
         if allow_edited_updates:
-            catub.add_event_handler(func, MessageEdited(**args))
-        catub.add_event_handler(func, NewMessage(**args))
+            ultronub.add_event_handler(func, MessageEdited(**args))
+        ultronub.add_event_handler(func, NewMessage(**args))
         try:
             LOAD_PLUG[file_test].append(func)
         except BaseException:

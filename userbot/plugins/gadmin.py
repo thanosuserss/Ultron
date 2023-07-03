@@ -16,7 +16,7 @@ from telethon.tl.functions.channels import EditBannedRequest
 from telethon.tl.types import ChatBannedRights
 from telethon.utils import get_display_name
 
-from userbot import catub
+from userbot import ultronub
 
 from ..core.managers import edit_delete, edit_or_reply
 from ..helpers.utils import _format
@@ -50,7 +50,7 @@ UNBAN_RIGHTS = ChatBannedRights(
 )
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="gban(?:\s|$)([\s\S]*)",
     command=("gban", plugin_category),
     info={
@@ -66,7 +66,7 @@ async def catgban(event):  # sourcery no-metrics
     user, reason = await get_user_from_event(event, cate)
     if not user:
         return
-    if user.id == catub.uid:
+    if user.id == ultronub.uid:
         return await edit_delete(cate, "`why would I ban myself`")
     if gban_sql.is_gbanned(user.id):
         await cate.edit(
@@ -132,7 +132,7 @@ async def catgban(event):  # sourcery no-metrics
                 await reply.delete()
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="ungban(?:\s|$)([\s\S]*)",
     command=("ungban", plugin_category),
     info={
@@ -209,7 +209,7 @@ async def catgban(event):
             )
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="listgban$",
     command=("listgban", plugin_category),
     info={
@@ -234,7 +234,7 @@ async def gablist(event):
     await edit_or_reply(event, GBANNED_LIST)
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="gmute(?:\s|$)([\s\S]*)",
     command=("gmute", plugin_category),
     info={
@@ -254,7 +254,7 @@ async def startgmute(event):
         user, reason = await get_user_from_event(event)
         if not user:
             return
-        if user.id == catub.uid:
+        if user.id == ultronub.uid:
             return await edit_or_reply(event, "`Sorry, I can't gmute myself`")
         userid = user.id
     try:
@@ -300,7 +300,7 @@ async def startgmute(event):
             await reply.forward_to(BOTLOG_CHATID)
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="ungmute(?:\s|$)([\s\S]*)",
     command=("ungmute", plugin_category),
     info={
@@ -320,7 +320,7 @@ async def endgmute(event):
         user, reason = await get_user_from_event(event)
         if not user:
             return
-        if user.id == catub.uid:
+        if user.id == ultronub.uid:
             return await edit_or_reply(event, "`Sorry, I can't gmute myself`")
         userid = user.id
     try:
@@ -362,13 +362,13 @@ async def endgmute(event):
             )
 
 
-@catub.cat_cmd(incoming=True)
+@ultronub.cat_cmd(incoming=True)
 async def watcher(event):
     if is_muted(event.sender_id, "gmute"):
         await event.delete()
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="gkick(?:\s|$)([\s\S]*)",
     command=("gkick", plugin_category),
     info={
@@ -383,7 +383,7 @@ async def catgkick(event):  # sourcery no-metrics
     user, reason = await get_user_from_event(event, cate)
     if not user:
         return
-    if user.id == catub.uid:
+    if user.id == ultronub.uid:
         return await edit_delete(cate, "`why would I kick myself`")
     san = await admin_groups(event.client)
     count = 0

@@ -14,7 +14,7 @@ from urllib.parse import quote_plus
 
 from ..core.managers import edit_delete, edit_or_reply
 from ..helpers.google_tools import chromeDriver
-from . import catub, deEmojify
+from . import ultronub, deEmojify
 
 plugin_category = "utils"
 
@@ -37,7 +37,7 @@ def download_carbon(driver, url):
     driver.find_element("xpath", "//button[contains(text(),'Export')]").click()
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="carbon(?:\s|$)([\s\S]*)",
     command=("carbon", plugin_category),
     info={
@@ -88,7 +88,7 @@ async def carbon_api(event):
     await cat.delete()
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="kar1(?:\s|$)([\s\S]*)",
     command=("kar1", plugin_category),
     info={
@@ -134,7 +134,7 @@ async def kar1_api(event):
     driver.quit()
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="kar2(?:\s|$)([\s\S]*)",
     command=("kar2", plugin_category),
     info={
@@ -182,7 +182,7 @@ async def kar2_api(event):
     await cat.delete()
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="kar3(?:\s|$)([\s\S]*)",
     command=("kar3", plugin_category),
     info={
@@ -230,7 +230,7 @@ async def kar3_api(event):
     await cat.delete()
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="kar4(?:\s|$)([\s\S]*)",
     command=("kar4", plugin_category),
     info={
@@ -277,7 +277,7 @@ async def kar4_api(event):
     await cat.delete()
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="kargb(?:\s|$)([\s\S]*)",
     command=("kargb", plugin_category),
     info={

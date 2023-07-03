@@ -17,7 +17,7 @@ from telethon.errors import UserIsBlockedError
 from telethon.events import CallbackQuery, StopPropagation
 from telethon.utils import get_display_name
 
-from userbot import Config, catub
+from userbot import Config, ultronub
 
 from ..core import check_owner, pool
 from ..core.logger import logging
@@ -73,14 +73,14 @@ async def check_bot_started_users(user, event):
         await event.client.send_message(BOTLOG_CHATID, notification)
 
 
-@catub.bot_cmd(
+@ultronub.bot_cmd(
     pattern=f"^/start({botusername})?([\s]+)?$",
     incoming=True,
     func=lambda e: e.is_private,
 )
 async def bot_start(event):  # sourcery skip: low-code-quality
     chat = await event.get_chat()
-    user = await catub.get_me()
+    user = await ultronub.get_me()
     if check_is_black_list(chat.id):
         return
     reply_to = await reply_id(event)
@@ -159,7 +159,7 @@ async def bot_start(event):  # sourcery skip: low-code-quality
         await check_bot_started_users(chat, event)
 
 
-@catub.bot_cmd(incoming=True, func=lambda e: e.is_private)
+@ultronub.bot_cmd(incoming=True, func=lambda e: e.is_private)
 async def bot_pms(event):  # sourcery no-metrics
     # sourcery skip: low-code-quality
     chat = await event.get_chat()
@@ -217,7 +217,7 @@ async def bot_pms(event):  # sourcery no-metrics
                     )
 
 
-@catub.bot_cmd(edited=True)
+@ultronub.bot_cmd(edited=True)
 async def bot_pms_edit(event):  # sourcery no-metrics
     chat = await event.get_chat()
     if check_is_black_list(chat.id):
@@ -313,7 +313,7 @@ async def handler(event):
                 LOGS.error(str(e))
 
 
-@catub.bot_cmd(pattern="^/uinfo$", from_users=Config.OWNER_ID)
+@ultronub.bot_cmd(pattern="^/uinfo$", from_users=Config.OWNER_ID)
 async def bot_start(event):
     reply_to = await reply_id(event)
     if not reply_to:
@@ -363,7 +363,7 @@ async def send_flood_alert(user_) -> None:  # sourcery skip: low-code-quality
             FloodConfig.ALERT[user_.id]["count"] = 1
         except Exception as e:
             if BOTLOG:
-                await catub.tgbot.send_message(
+                await ultronub.tgbot.send_message(
                     BOTLOG_CHATID,
                     f"**Error:**\nWhile updating flood count\n`{e}`",
                 )
@@ -390,7 +390,7 @@ async def send_flood_alert(user_) -> None:  # sourcery skip: low-code-quality
                     "Is Flooding your bot !, Check `.help delsudo` to remove the user from Sudo."
                 )
                 if BOTLOG:
-                    await catub.tgbot.send_message(BOTLOG_CHATID, sudo_spam)
+                    await ultronub.tgbot.send_message(BOTLOG_CHATID, sudo_spam)
             else:
                 await ban_user_from_bot(
                     user_,
@@ -404,7 +404,7 @@ async def send_flood_alert(user_) -> None:  # sourcery skip: low-code-quality
         if not fa_id:
             return
         try:
-            msg_ = await catub.tgbot.get_messages(BOTLOG_CHATID, fa_id)
+            msg_ = await ultronub.tgbot.get_messages(BOTLOG_CHATID, fa_id)
             if msg_.text != flood_msg:
                 await msg_.edit(flood_msg, buttons=buttons)
         except Exception as fa_id_err:
@@ -412,30 +412,30 @@ async def send_flood_alert(user_) -> None:  # sourcery skip: low-code-quality
             return
     else:
         if BOTLOG:
-            fa_msg = await catub.tgbot.send_message(
+            fa_msg = await ultronub.tgbot.send_message(
                 BOTLOG_CHATID,
                 flood_msg,
                 buttons=buttons,
             )
         try:
-            chat = await catub.tgbot.get_entity(BOTLOG_CHATID)
-            await catub.tgbot.send_message(
+            chat = await ultronub.tgbot.get_entity(BOTLOG_CHATID)
+            await ultronub.tgbot.send_message(
                 Config.OWNER_ID,
                 f"⚠️  **[Bot Flood Warning !](https://t.me/c/{chat.id}/{fa_msg.id})**",
             )
         except UserIsBlockedError:
             if BOTLOG:
-                await catub.tgbot.send_message(BOTLOG_CHATID, "**Unblock your bot !**")
+                await ultronub.tgbot.send_message(BOTLOG_CHATID, "**Unblock your bot !**")
     if FloodConfig.ALERT[user_.id].get("fa_id") is None and fa_msg:
         FloodConfig.ALERT[user_.id]["fa_id"] = fa_msg.id
 
 
-@catub.tgbot.on(CallbackQuery(data=re.compile(b"bot_pm_ban_([0-9]+)")))
+@ultronub.tgbot.on(CallbackQuery(data=re.compile(b"bot_pm_ban_([0-9]+)")))
 @check_owner
 async def bot_pm_ban_cb(c_q: CallbackQuery):
     user_id = int(c_q.pattern_match.group(1))
     try:
-        user = await catub.get_entity(user_id)
+        user = await ultronub.get_entity(user_id)
     except Exception as e:
         await c_q.answer(f"Error:\n{e}")
     else:
@@ -472,7 +472,7 @@ def is_flood(uid: int) -> Optional[bool]:
         return True
 
 
-@catub.tgbot.on(CallbackQuery(data=re.compile(b"toggle_bot-antiflood_off$")))
+@ultronub.tgbot.on(CallbackQuery(data=re.compile(b"toggle_bot-antiflood_off$")))
 @check_owner
 async def settings_toggle(c_q: CallbackQuery):
     if gvarstatus("bot_antif") is None:
@@ -482,8 +482,8 @@ async def settings_toggle(c_q: CallbackQuery):
     await c_q.edit("BOT_ANTIFLOOD is now disabled !")
 
 
-@catub.bot_cmd(incoming=True, func=lambda e: e.is_private)
-@catub.bot_cmd(edited=True, func=lambda e: e.is_private)
+@ultronub.bot_cmd(incoming=True, func=lambda e: e.is_private)
+@ultronub.bot_cmd(edited=True, func=lambda e: e.is_private)
 async def antif_on_msg(event):
     if gvarstatus("bot_antif") is None:
         return

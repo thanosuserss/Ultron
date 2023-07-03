@@ -16,7 +16,7 @@ from ..Config import Config
 from ..core.managers import edit_delete, edit_or_reply
 from ..helpers.functions import getTranslate
 from ..sql_helper.globals import gvarstatus
-from . import Convert, catub, soft_deEmojify
+from . import Convert, ultronub, soft_deEmojify
 
 plugin_category = "utils"
 
@@ -51,7 +51,7 @@ async def ocr_space_file(
     return r.json()
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="(|t)ocr(?:\s|$)([\s\S]*)",
     command=("ocr", plugin_category),
     info={
@@ -109,7 +109,7 @@ async def ocr(event):
         os.remove(output_file[1])
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="tocr",
     command=("tocr", plugin_category),
     info={

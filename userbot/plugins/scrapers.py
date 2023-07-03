@@ -14,7 +14,7 @@ from pySmartDL import SmartDL
 from wikipedia import summary
 from wikipedia.exceptions import DisambiguationError, PageError
 
-from userbot import catub
+from userbot import ultronub
 
 from ..core.managers import edit_delete, edit_or_reply
 from ..helpers.functions import get_cast, get_moviecollections, imdb, mov_titles
@@ -25,7 +25,7 @@ plugin_category = "utils"
 moviepath = os.path.join(os.getcwd(), "temp", "moviethumb.jpg")
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="wiki ([\s\S]*)",
     command=("wiki", plugin_category),
     info={
@@ -73,7 +73,7 @@ async def wiki(event):
         )
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="imdb ([\s\S]*)",
     command=("imdb", plugin_category),
     info={

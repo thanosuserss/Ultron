@@ -104,9 +104,9 @@ async def safe_check_text(msg):  # sourcery no-metrics
     if not msg:
         return False
     msg = str(msg)
-    from .session import catub
+    from .session import ultronub
 
-    phone = str((await catub.get_entity(catub.uid)).phone)
+    phone = str((await ultronub.get_entity(ultronub.uid)).phone)
     return bool(
         (
             (Config.STRING_SESSION in msg)

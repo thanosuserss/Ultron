@@ -13,7 +13,7 @@ from collections import defaultdict, deque
 from telethon import events
 from telethon.tl import functions, types
 
-from userbot import catub
+from userbot import ultronub
 
 from ..Config import Config
 from ..core.managers import edit_delete, edit_or_reply
@@ -76,21 +76,21 @@ def doit(chat_id, match, original):
 
 async def group_has_sedbot(group):
     if isinstance(group, types.InputPeerChannel):
-        full = await catub(functions.channels.GetFullChannelRequest(group))
+        full = await ultronub(functions.channels.GetFullChannelRequest(group))
     elif isinstance(group, types.InputPeerChat):
-        full = await catub(functions.messages.GetFullChatRequest(group.chat_id))
+        full = await ultronub(functions.messages.GetFullChatRequest(group.chat_id))
     else:
         return False
 
     return any(KNOWN_RE_BOTS.match(x.username or "") for x in full.users)
 
 
-@catub.on(events.NewMessage)
+@ultronub.on(events.NewMessage)
 async def on_message(event):
     last_msgs[event.chat_id].appendleft(event.message)
 
 
-@catub.on(events.MessageEdited)
+@ultronub.on(events.MessageEdited)
 async def on_edit(event):
     for m in last_msgs[event.chat_id]:
         if m.id == event.id:
@@ -98,7 +98,7 @@ async def on_edit(event):
             break
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="^s/((?:\\/|[^/])+)/((?:\\/|[^/])*)(/.*)?",
     command=("sed", plugin_category),
     info={

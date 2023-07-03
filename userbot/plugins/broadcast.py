@@ -16,7 +16,7 @@ from asyncio import sleep
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 from telethon.utils import get_display_name
 
-from .. import catub
+from .. import ultronub
 from ..core.logger import logging
 from ..core.managers import edit_delete, edit_or_reply
 from ..helpers.utils import _format, get_user_from_event
@@ -28,7 +28,7 @@ plugin_category = "tools"
 LOGS = logging.getLogger(__name__)
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="msgto(?:\s|$)([\s\S]*)",
     command=("msgto", plugin_category),
     info={
@@ -71,7 +71,7 @@ async def catbroadcast_add(event):
     await edit_delete(event, "__Successfully sent the message.__")
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="addto(?:\s|$)([\s\S]*)",
     command=("addto", plugin_category),
     info={
@@ -118,7 +118,7 @@ async def catbroadcast_add(event):
             )
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="list(?:\s|$)([\s\S]*)",
     command=("list", plugin_category),
     info={
@@ -167,7 +167,7 @@ async def catbroadcast_list(event):
     await edit_or_reply(catevent, finaloutput)
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="listall$",
     command=("listall", plugin_category),
     info={
@@ -190,7 +190,7 @@ async def catbroadcast_list(event):
     await edit_or_reply(event, resultext)
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="sendto(?:\s|$)([\s\S]*)",
     command=("sendto", plugin_category),
     info={
@@ -253,7 +253,7 @@ async def catbroadcast_send(event):
         )
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="fwdto(?:\s|$)([\s\S]*)",
     command=("fwdto", plugin_category),
     info={
@@ -316,7 +316,7 @@ async def catbroadcast_send(event):
         )
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="rmfrom(?:\s|$)([\s\S]*)",
     command=("rmfrom", plugin_category),
     info={
@@ -364,7 +364,7 @@ async def catbroadcast_remove(event):
             )
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="frmfrom(?:\s|$)([\s\S]*)",
     command=("frmfrom", plugin_category),
     info={
@@ -433,7 +433,7 @@ async def catbroadcast_remove(event):
             )
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="delc(?:\s|$)([\s\S]*)",
     command=("delc", plugin_category),
     info={

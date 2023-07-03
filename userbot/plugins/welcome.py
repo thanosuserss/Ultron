@@ -14,7 +14,7 @@
 from telethon import events
 from telethon.utils import get_display_name
 
-from userbot import catub
+from userbot import ultronub
 from userbot.core.logger import logging
 
 from ..core.managers import edit_delete, edit_or_reply
@@ -31,7 +31,7 @@ plugin_category = "utils"
 LOGS = logging.getLogger(__name__)
 
 
-@catub.on(events.ChatAction)
+@ultronub.on(events.ChatAction)
 async def _(event):  # sourcery no-metrics  # sourcery skip: low-code-quality
     cws = get_current_welcome_settings(event.chat_id)
     if (
@@ -97,7 +97,7 @@ async def _(event):  # sourcery no-metrics  # sourcery skip: low-code-quality
         update_previous_welcome(event.chat_id, current_message.id)
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="savewelcome(?:\s|$)([\s\S]*)",
     command=("savewelcome", plugin_category),
     info={
@@ -159,7 +159,7 @@ async def save_welcome(event):
     await edit_or_reply("Error while setting welcome in this group")
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="clearwelcome$",
     command=("clearwelcome", plugin_category),
     info={
@@ -176,7 +176,7 @@ async def del_welcome(event):
         await edit_or_reply(event, "`Do I have a welcome note here ?`")
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="listwelcome$",
     command=("listwelcome", plugin_category),
     info={
@@ -204,7 +204,7 @@ async def show_welcome(event):
         await event.reply(cws.reply, link_preview=False)
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="cleanwelcome (on|off)$",
     command=("cleanwelcome", plugin_category),
     info={

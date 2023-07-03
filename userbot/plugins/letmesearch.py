@@ -9,14 +9,14 @@
 
 from asyncio import sleep
 
-from userbot import catub
+from userbot import ultronub
 
 from ..core.managers import edit_delete, edit_or_reply
 
 plugin_category = "utils"
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="lmg(?: |$)([\s\S]*)",
     command=("lmg", plugin_category),
     info={
@@ -41,7 +41,7 @@ async def googal(event):
     )
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="lmy(?: |$)([\s\S]*)",
     command=("lmy", plugin_category),
     info={
@@ -68,7 +68,7 @@ async def uthoob(event):
     )
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="ddg(?: |$)([\s\S]*)",
     command=("ddg", plugin_category),
     info={
@@ -95,7 +95,7 @@ async def dukdukgo(event):
     )
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="lmalt(?: |$)([\s\S]*)",
     command=("lmalt", plugin_category),
     info={
@@ -120,7 +120,7 @@ async def news(event):
     )
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="lmvar ([\s\S]*)",
     command=("lmvar", plugin_category),
     info={
@@ -142,7 +142,7 @@ async def var(event):
     )
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="lmlog ([\s\S]*)",
     command=("lmlog", plugin_category),
     info={
@@ -162,7 +162,7 @@ async def log(event):
     )
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="dyno ([\s\S]*)",
     command=("dyno", plugin_category),
     info={
@@ -188,7 +188,7 @@ async def dyno(event):
     )
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="lmkp(?: |$)([\s\S]*)",
     command=("lmkp", plugin_category),
     info={
@@ -213,7 +213,7 @@ async def kanun(event):
     )
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="gem(?: |$)([\s\S]*)",
     command=("gem", plugin_category),
     info={
@@ -238,7 +238,7 @@ async def gem(event):
     )
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="archive(?: |$)([\s\S]*)",
     command=("archive", plugin_category),
     info={

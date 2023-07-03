@@ -23,7 +23,7 @@ from . import *
 plugin_category = "tools"
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="exec(?:\s|$)([\s\S]*)",
     command=("exec", plugin_category),
     info={
@@ -62,7 +62,7 @@ async def _(event):
         )
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="eval(?:\s|$)([\s\S]*)",
     command=("eval", plugin_category),
     info={
@@ -135,7 +135,7 @@ async def aexec(code, smessatatus):
     )
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="inspect ([\s\S]*)",
     command=("inspect", plugin_category),
     info={
@@ -200,7 +200,7 @@ async def search_func(event):
         f.write(text)
 
     await catevent.delete()
-    await catub.send_file(
+    await ultronub.send_file(
         event.chat_id,
         filename,
         caption=caption,

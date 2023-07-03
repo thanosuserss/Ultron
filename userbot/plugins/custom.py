@@ -9,7 +9,7 @@
 
 from urlextract import URLExtract
 
-from userbot import BOTLOG_CHATID, catub
+from userbot import BOTLOG_CHATID, ultronub
 from userbot.core.logger import logging
 
 from ..core.managers import edit_delete, edit_or_reply
@@ -22,7 +22,7 @@ LOGS = logging.getLogger(__name__)
 extractor = URLExtract()
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="custom (pmpermit|pmpic|pmblock|startmsg)$",
     command=("custom", plugin_category),
     info={
@@ -86,7 +86,7 @@ async def custom(event):
         await event.client.send_message(BOTLOG_CHATID, text, silent=True)
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="delcustom (pmpermit|pmpic|pmblock|startmsg)$",
     command=("delcustom", plugin_category),
     info={

@@ -25,7 +25,7 @@ else:
     session = "UltronUserBot"
 
 try:
-    catub = UltronUserBotClient(
+    ultronub = UltronUserBotClient(
         session=session,
         api_id=Config.APP_ID,
         api_hash=Config.API_HASH,
@@ -40,7 +40,7 @@ except Exception as e:
     sys.exit()
 
 
-catub.tgbot = tgbot = UltronUserBotClient(
+ultronub.tgbot = tgbot = UltronUserBotClient(
     session="CatTgbot",
     api_id=Config.APP_ID,
     api_hash=Config.API_HASH,

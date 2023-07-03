@@ -13,14 +13,14 @@ from somnium import Somnium
 from ..core.managers import edit_delete, edit_or_reply
 from ..helpers import GetStylesGraph, ThabAi, reply_id
 from ..sql_helper.globals import addgvar, gvarstatus
-from . import catub, mention
+from . import ultronub, mention
 
 catai = ThabAi()
 
 plugin_category = "tools"
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="genimg(?:\s|$)([\s\S]*)",
     command=("genimg", plugin_category),
     info={
@@ -73,7 +73,7 @@ async def gen_img(odi):
         )
     await edit_or_reply(catevent, "`Generating ai image ...`")
     getart = Somnium.Generate(query, styleid)
-    await catub.send_file(
+    await ultronub.send_file(
         odi.chat_id,
         getart,
         force_document=True,
@@ -83,7 +83,7 @@ async def gen_img(odi):
     await catevent.delete()
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="gentxt(?:\s|$)([\s\S]*)",
     command=("gentxt", plugin_category),
     info={

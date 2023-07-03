@@ -15,11 +15,11 @@ from ..core.logger import logging
 LOGS = logging.getLogger(__name__)
 
 
-async def is_admin(catub, chat_id, userid):
+async def is_admin(ultronub, chat_id, userid):
     if not str(chat_id).startswith("-100"):
         return False
     try:
-        req_jo = await catub.get_permissions(chat_id, userid)
+        req_jo = await ultronub.get_permissions(chat_id, userid)
         chat_participant = req_jo.participant
         if isinstance(
             chat_participant, (ChannelParticipantCreator, ChannelParticipantAdmin)

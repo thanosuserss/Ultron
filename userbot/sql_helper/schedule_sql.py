@@ -12,7 +12,7 @@ from datetime import datetime, timedelta
 
 from sqlalchemy import JSON, Column, DateTime, Integer, String
 
-from userbot import catub
+from userbot import ultronub
 
 from . import BASE, SESSION
 
@@ -96,10 +96,10 @@ def delete_all_messages():
 
 async def send_message(recipient, message):
     with contextlib.suppress(Exception):
-        getmsg = await catub.get_messages(
+        getmsg = await ultronub.get_messages(
             int(message["chat"]), ids=int(message["msg_id"])
         )
-        await catub.send_message(int(recipient), getmsg)
+        await ultronub.send_message(int(recipient), getmsg)
 
 
 async def send_scheduled_messages():

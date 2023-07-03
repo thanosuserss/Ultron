@@ -32,7 +32,7 @@ from telethon.tl.types import (
 )
 from telethon.utils import get_display_name
 
-from userbot import catub
+from userbot import ultronub
 
 from ..core.logger import logging
 from ..core.managers import edit_delete, edit_or_reply
@@ -58,13 +58,13 @@ BANNED_RIGHTS = ChatBannedRights(
 
 async def ban_user(chat_id, i, rights):
     try:
-        await catub(functions.channels.EditBannedRequest(chat_id, i, rights))
+        await ultronub(functions.channels.EditBannedRequest(chat_id, i, rights))
         return True, None
     except Exception as exc:
         return False, str(exc)
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="kickme$",
     command=("kickme", plugin_category),
     info={
@@ -81,7 +81,7 @@ async def kickme(leave):
     await leave.client.kick_participant(leave.chat_id, "me")
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="kickall$",
     command=("kickall", plugin_category),
     info={
@@ -123,7 +123,7 @@ async def _(event):
     )
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="banall$",
     command=("banall", plugin_category),
     info={
@@ -167,7 +167,7 @@ async def _(event):
     )
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="unbanall$",
     command=("unbanall", plugin_category),
     info={
@@ -223,7 +223,7 @@ async def _(event):
 
 
 # Ported by ©[NIKITA](t.me/kirito6969) and ©[EYEPATCH](t.me/NeoMatrix90)
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="zombies( -r| )? ?([\s\S]*)",
     command=("zombies", plugin_category),
     info={
@@ -390,7 +390,7 @@ async def rm_deletedacc(show):  # sourcery no-metrics
         )
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="ikuck ?([\s\S]*)",
     command=("ikuck", plugin_category),
     info={

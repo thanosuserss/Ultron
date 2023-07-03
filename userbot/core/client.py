@@ -207,7 +207,7 @@ class UltronUserBotClient(TelegramClient):
                             Config.PRIVATE_GROUP_BOT_API_ID, text, link_preview=False
                         )
 
-            from .session import catub
+            from .session import ultronub
 
             if func.__doc__ is not None:
                 CMD_INFO[command[0]].append((func.__doc__).strip())
@@ -220,17 +220,17 @@ class UltronUserBotClient(TelegramClient):
                     except BaseException:
                         LOADED_CMDS.update({command[0]: [wrapper]})
                 if edited:
-                    catub.add_event_handler(
+                    ultronub.add_event_handler(
                         wrapper,
                         MessageEdited(pattern=REGEX_.regex1, outgoing=True, **kwargs),
                     )
-                catub.add_event_handler(
+                ultronub.add_event_handler(
                     wrapper,
                     NewMessage(pattern=REGEX_.regex1, outgoing=True, **kwargs),
                 )
                 if public:
                     if edited:
-                        catub.add_event_handler(
+                        ultronub.add_event_handler(
                             wrapper,
                             MessageEdited(
                                 pattern=REGEX_.regex2,
@@ -238,7 +238,7 @@ class UltronUserBotClient(TelegramClient):
                                 **kwargs,
                             ),
                         )
-                    catub.add_event_handler(
+                    ultronub.add_event_handler(
                         wrapper,
                         NewMessage(
                             pattern=REGEX_.regex2, from_users=_vcusers_list(), **kwargs
@@ -250,7 +250,7 @@ class UltronUserBotClient(TelegramClient):
                     and (command is None or command[0] in sudo_enabledcmds)
                 ):
                     if edited:
-                        catub.add_event_handler(
+                        ultronub.add_event_handler(
                             wrapper,
                             MessageEdited(
                                 pattern=REGEX_.regex2,
@@ -258,7 +258,7 @@ class UltronUserBotClient(TelegramClient):
                                 **kwargs,
                             ),
                         )
-                    catub.add_event_handler(
+                    ultronub.add_event_handler(
                         wrapper,
                         NewMessage(
                             pattern=REGEX_.regex2,
@@ -274,8 +274,8 @@ class UltronUserBotClient(TelegramClient):
                 except BaseException:
                     LOADED_CMDS.update({file_test: [func]})
                 if edited:
-                    catub.add_event_handler(func, events.MessageEdited(**kwargs))
-                catub.add_event_handler(func, events.NewMessage(**kwargs))
+                    ultronub.add_event_handler(func, events.MessageEdited(**kwargs))
+                ultronub.add_event_handler(func, events.NewMessage(**kwargs))
             return wrapper
 
         return decorator
@@ -347,12 +347,12 @@ class UltronUserBotClient(TelegramClient):
                             Config.PRIVATE_GROUP_BOT_API_ID, text, link_preview=False
                         )
 
-            from .session import catub
+            from .session import ultronub
 
             if edited:
-                catub.tgbot.add_event_handler(func, events.MessageEdited(**kwargs))
+                ultronub.tgbot.add_event_handler(func, events.MessageEdited(**kwargs))
             else:
-                catub.tgbot.add_event_handler(func, events.NewMessage(**kwargs))
+                ultronub.tgbot.add_event_handler(func, events.NewMessage(**kwargs))
 
             return wrapper
 

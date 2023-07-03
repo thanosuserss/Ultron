@@ -7,4 +7,4 @@
 # Please see: https://github.com/thanosuserss/Ultron/blob/master/LICENSE
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
-from .catub_config import Config
+from .ultronub_config import Config

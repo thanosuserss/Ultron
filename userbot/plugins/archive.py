@@ -21,7 +21,7 @@ from telethon import types
 from telethon.utils import get_extension
 
 from ..Config import Config
-from . import catub, edit_delete, edit_or_reply, progress
+from . import ultronub, edit_delete, edit_or_reply, progress
 
 thumb_image_path = os.path.join(Config.TMP_DOWNLOAD_DIRECTORY, "thumb_image.jpg")
 plugin_category = "misc"
@@ -36,7 +36,7 @@ def zipdir(dirName):
     return filePaths
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="zip(?:\s|$)([\s\S]*)",
     command=("zip", plugin_category),
     info={
@@ -77,7 +77,7 @@ async def zip_file(event):
     )
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="tar(?:\s|$)([\s\S]*)",
     command=("tar", plugin_category),
     info={
@@ -119,7 +119,7 @@ async def tar_file(event):
     )
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="unzip(?:\s|$)([\s\S]*)",
     command=("unzip", plugin_category),
     info={
@@ -203,7 +203,7 @@ async def zip_file(event):  # sourcery no-metrics
         )
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="untar(?:\s|$)([\s\S]*)",
     command=("untar", plugin_category),
     info={

@@ -14,7 +14,7 @@ from datetime import datetime
 import requests
 from validators.url import url
 
-from userbot import catub
+from userbot import ultronub
 
 from ..Config import Config
 from ..core.managers import edit_delete, edit_or_reply
@@ -24,7 +24,7 @@ from ..helpers.utils import reply_id
 plugin_category = "utils"
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="(ss|gis)(?:\s|$)([\s\S]*)",
     command=("ss", plugin_category),
     info={
@@ -71,7 +71,7 @@ async def screenshot(event):
         )
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="scapture ([\s\S]*)",
     command=("scapture", plugin_category),
     info={

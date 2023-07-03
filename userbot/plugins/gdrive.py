@@ -32,7 +32,7 @@ from googleapiclient.http import MediaFileUpload, MediaIoBaseDownload
 from telethon import events
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 
-from userbot import catub
+from userbot import ultronub
 from userbot.core.logger import logging
 
 from ..Config import Config
@@ -956,7 +956,7 @@ async def glists(gdrive):
     )
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="gauth$",
     command=("gauth", plugin_category),
     info={
@@ -1043,7 +1043,7 @@ async def generate_credentials(gdrive):
     await gdrive.delete()
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="greset",
     command=("greset", plugin_category),
     info={
@@ -1063,7 +1063,7 @@ async def reset_credentials(gdrive):
     return
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="glist(?: |$)(-l \d+)?(?: |$)?([\s\S]*)?(?: |$)",
     command=("glist", plugin_category),
     info={
@@ -1090,7 +1090,7 @@ async def catlists(gdrive):
     await glists(gdrive)
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="gdf (mkdir|rm|info) ([\s\S]*)",
     command=("gdf", plugin_category),
     info={
@@ -1252,7 +1252,7 @@ async def google_drive_managers(gdrive):  # sourcery no-metrics
     await gdrive.edit(reply)
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="gabort$",
     command=("gabort", plugin_category),
     info={
@@ -1277,7 +1277,7 @@ async def cancel_process(gdrive):
     await gdrive.delete()
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="ugd(?:\s|$)([\s\S]*)",
     command=("ugd", plugin_category),
     info={
@@ -1448,7 +1448,7 @@ async def google_drive(gdrive):  # sourcery no-metrics
     return
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="gclear$",
     command=("gclear", plugin_category),
     info={
@@ -1484,7 +1484,7 @@ async def set_upload_folder(gdrive):
         return None
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="gset(?:\s|$)([\s\S]*)",
     command=("gset", plugin_category),
     info={
@@ -1522,7 +1522,7 @@ async def set_upload_folder(gdrive):
     )
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="gdown ?(-u)? ([\s\S]*)",
     command=("gdown", plugin_category),
     info={
@@ -1580,7 +1580,7 @@ async def g_download(event):
         )
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="gshare ([\s\S]*)",
     command=("gshare", plugin_category),
     info={

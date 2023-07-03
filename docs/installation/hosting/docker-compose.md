@@ -48,7 +48,7 @@ sudo docker-compose stop
 
 {% code title="pull the latest image from hub" overflow="wrap" %}
 ```batch
-sudo docker pull catub/core:bullseye
+sudo docker pull ultronub/core:bullseye
 ```
 {% endcode %}
 

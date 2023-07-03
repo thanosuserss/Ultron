@@ -15,12 +15,12 @@ from telethon.tl.functions.users import GetFullUserRequest
 
 from ..Config import Config
 from ..sql_helper.globals import gvarstatus
-from . import ALIVE_NAME, BOTLOG, BOTLOG_CHATID, catub, edit_delete, get_user_from_event
+from . import ALIVE_NAME, BOTLOG, BOTLOG_CHATID, ultronub, edit_delete, get_user_from_event
 
 plugin_category = "utils"
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="clone(?:\s|$)([\s\S]*)",
     command=("clone", plugin_category),
     info={
@@ -64,7 +64,7 @@ async def _(event):
         )
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="revert$",
     command=("revert", plugin_category),
     info={

@@ -20,7 +20,7 @@ from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.utils import get_display_name
 
-from userbot import Convert, catub
+from userbot import Convert, ultronub
 
 from ..core.logger import logging
 from ..core.managers import edit_delete, edit_or_reply
@@ -43,7 +43,7 @@ def get_warp_length(width):
     return int((20.0 / 1024.0) * (width + 0.0))
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="qpic(?:\s|$)([\s\S]*)",
     command=("qpic", plugin_category),
     info={
@@ -161,7 +161,7 @@ async def q_pic(event):  # sourcery no-metrics  # sourcery skip: low-code-qualit
             os.remove(i)
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="(q|rq|fq|frq)(?:\s|$)([\s\S]*)",
     command=("q", plugin_category),
     info={
@@ -235,7 +235,7 @@ async def stickerchat(catquotes):
     os.remove(endfi[1])
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="qbot(?:\s|$)([\s\S]*)",
     command=("qbot", plugin_category),
     info={

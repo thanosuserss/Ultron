@@ -13,7 +13,7 @@ import os
 from glitch_this import ImageGlitcher
 from PIL import Image
 
-from userbot import Convert, catub
+from userbot import Convert, ultronub
 
 from ..core.managers import edit_delete
 from ..helpers import reply_id, unsavegif
@@ -21,7 +21,7 @@ from ..helpers import reply_id, unsavegif
 plugin_category = "fun"
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="glitch(s)?(?: |$)([1-8])?",
     command=("glitch", plugin_category),
     info={

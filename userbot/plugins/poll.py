@@ -13,7 +13,7 @@ from telethon.errors.rpcbaseerrors import ForbiddenError
 from telethon.errors.rpcerrorlist import PollOptionInvalidError
 from telethon.tl.types import InputMediaPoll, Poll
 
-from userbot import catub
+from userbot import ultronub
 
 from ..core.managers import edit_or_reply
 from . import Build_Poll, reply_id
@@ -21,7 +21,7 @@ from . import Build_Poll, reply_id
 plugin_category = "extra"
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="poll(?:\s|$)([\s\S]*)",
     command=("poll", plugin_category),
     info={

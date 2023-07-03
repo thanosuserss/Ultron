@@ -19,7 +19,7 @@ from pySmartDL import SmartDL
 from telethon.tl import types
 from telethon.utils import get_extension
 
-from userbot import catub
+from userbot import ultronub
 
 from ..Config import Config
 from ..core.managers import edit_delete, edit_or_reply
@@ -37,7 +37,7 @@ async def _get_file_name(path: pathlib.Path, full: bool = True) -> str:
     return str(path.absolute()) if full else path.stem + path.suffix
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="d(own)?l(oad)?(?:\s|$)([\s\S]*)",
     command=("download", plugin_category),
     info={
@@ -181,7 +181,7 @@ async def _(event):  # sourcery no-metrics  # sourcery skip: low-code-quality
         await mone.edit("`Reply to a message to download to my local server.`")
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="d(own)?l(oad)?to(?:\s|$)([\s\S]*)",
     command=("dlto", plugin_category),
     info={

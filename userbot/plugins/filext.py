@@ -10,14 +10,14 @@
 import requests
 from bs4 import BeautifulSoup
 
-from userbot import catub
+from userbot import ultronub
 
 from ..core.managers import edit_or_reply
 
 plugin_category = "utils"
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="filext(?:\s|$)([\s\S]*)",
     command=("filext", plugin_category),
     info={

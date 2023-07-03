@@ -12,7 +12,7 @@ import string
 from telethon.errors.rpcerrorlist import ForbiddenError
 from telethon.tl.types import Channel, MessageMediaWebPage
 
-from userbot import catub
+from userbot import ultronub
 from userbot.core.logger import logging
 
 from ..Config import Config
@@ -41,7 +41,7 @@ async def all_groups_id(cat):
     return catgroups
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="frwd$",
     command=("frwd", plugin_category),
     info={
@@ -71,7 +71,7 @@ async def _(event):
             LOGS.info(str(e))
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="resend$",
     command=("resend", plugin_category),
     info={
@@ -99,7 +99,7 @@ async def _(event):
     await event.client.send_message(event.chat_id, m.text)
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="fpost ([\s\S]*)",
     command=("fpost", plugin_category),
     info={

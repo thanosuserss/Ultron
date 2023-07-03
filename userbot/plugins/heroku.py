@@ -15,7 +15,7 @@ import heroku3
 import requests
 import urllib3
 
-from userbot import BOTLOG_CHATID, catub
+from userbot import BOTLOG_CHATID, ultronub
 
 from ..Config import Config
 from ..core.managers import edit_delete, edit_or_reply
@@ -46,7 +46,7 @@ def heroku_app():
         )
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="(set|get|del|info) var(?:\s|$)([\s\S]*)",
     command=("var", plugin_category),
     info={
@@ -150,7 +150,7 @@ async def variable(event):
         del heroku_var[variable]
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="usage$",
     command=("usage", plugin_category),
     info={
@@ -215,7 +215,7 @@ async def dyno_usage(dyno):
     )
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="herokulogs$",
     command=("herokulogs", plugin_category),
     info={
@@ -247,7 +247,7 @@ def prettyjson(obj, indent=2, maxlinelength=80):
     return indentitems(items, indent, level=0)
 
 
-@catub.cat_cmd(
+@ultronub.cat_cmd(
     pattern="(|add|del)buildpack(?:\s|$)([\s\S]*)",
     command=("buildpack", plugin_category),
     info={
