@@ -11,7 +11,7 @@ Heroku = heroku3.from_key(Config.HEROKU_API_KEY)
 heroku_api = "https://api.heroku.com"
 
 # UniBorg Telegram UseRBot
-# Copyright (C) 2020 @UniBorg
+# Copyright (C) 2023 @UniBorg
 # This code is licensed under
 # the "you can't use this for anything - public or private,
 # unless you know the two prime factors to the number below" license

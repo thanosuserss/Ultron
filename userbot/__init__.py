@@ -1,5 +1,5 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# UltronUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
-# Copyright (C) 2020-2023 by Tgultron@Github.
+# Copyright (C) 2023-2023 by Tgultron@Github.
 
 # This file is part of: https://github.com/thanosuserss/Ultron
 # and is released under the "GNU v3.0 License Agreement".
@@ -24,7 +24,7 @@ from .sql_helper.globals import addgvar, delgvar, gvarstatus
 __version__ = "3.3.0"
 __license__ = "GNU Affero General Public License v3.0"
 __author__ = "UltronUserBot <https://github.com/thanosuserss/Ultron>"
-__copyright__ = f"Copyright (C) 2020 - 2023  {__author__}"
+__copyright__ = f"Copyright (C) 2023 - 2023  {__author__}"
 
 ultronub.version = __version__
 ultronub.tgbot.version = __version__

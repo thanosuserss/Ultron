@@ -1,7 +1,7 @@
 """ Download Youtube Video / Audio in a User friendly interface """
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# UltronUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
-# Copyright (C) 2020-2023 by Tgultron@Github.
+# Copyright (C) 2023-2023 by Tgultron@Github.
 
 # This file is part of: https://github.com/thanosuserss/Ultron
 # and is released under the "GNU v3.0 License Agreement".

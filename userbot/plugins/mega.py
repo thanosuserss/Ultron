@@ -1,4 +1,4 @@
-# Copyright (C) 2020 Adek Maulana.
+# Copyright (C) 2023 Adek Maulana.
 # All rights reserved.
 #
 # Redistribution and use of this script, with or without modification, is

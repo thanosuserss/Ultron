@@ -1,5 +1,5 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# UltronUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
-# Copyright (C) 2020-2023 by Tgultron@Github.
+# Copyright (C) 2023-2023 by Tgultron@Github.
 
 # This file is part of: https://github.com/thanosuserss/Ultron
 # and is released under the "GNU v3.0 License Agreement".
@@ -8,7 +8,7 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # Special credits: [Dev](https://github.com/D3vd) for his awesome API
 #
-# Copyright (C) 2020 BY - GitHub.com/code-rgb [TG - @DeletedUser420]
+# Copyright (C) 2023 BY - GitHub.com/code-rgb [TG - @DeletedUser420]
 # All rights reserved.
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
