@@ -102,7 +102,7 @@ A boolean variable \[ <mark style="color:green;">True</mark> / <mark style="colo
 
 ### 〣 `EXTERNAL_REPO`
 
-A string variable that contains the link to an external repository where additional plugins , modules for the userbot can be found. The default value is [<mark style="color:blue;">https://github.com/TgCatUB/CatPlugins</mark>](https://github.com/TgCatUB/CatPlugins) .
+A string variable that contains the link to an external repository where additional plugins , modules for the userbot can be found. The default value is [<mark style="color:blue;">https://github.com/Tgultron/CatPlugins</mark>](https://github.com/Tgultron/CatPlugins) .
 
 ### 〣 `EXTERNAL_REPOBRANCH`
 

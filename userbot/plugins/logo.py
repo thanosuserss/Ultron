@@ -1,5 +1,5 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# UltronUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
-# Copyright (C) 2020-2023 by TgCatUB@Github.
+# Copyright (C) 2020-2023 by Tgultron@Github.
 
 # This file is part of: https://github.com/thanosuserss/Ultron
 # and is released under the "GNU v3.0 License Agreement".
@@ -127,7 +127,7 @@ async def very(event):  # sourcery no-metrics
     rcheck = random_checker(LOGO_FONT, LOGO_FONT_COLOR, LOGO_BACKGROUND)
     if rcheck:
         rjson = requests.get(
-            "https://raw.githubusercontent.com/TgCatUB/UltronUserBot-Resources/master/Resources/Logo/resources.txt"
+            "https://raw.githubusercontent.com/Tgultron/UltronUserBot-Resources/master/Resources/Logo/resources.txt"
         ).json()
     if count > 1 and not rcheck:
         count = 1

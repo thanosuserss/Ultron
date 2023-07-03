@@ -1,6 +1,6 @@
 ---
 description: >-
-  Thank you for your interest in supporting TgCatUB! Your contribution helps us
+  Thank you for your interest in supporting Tgultron! Your contribution helps us
   maintain our open-source repositories.
 ---
 

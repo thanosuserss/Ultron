@@ -1,5 +1,5 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# UltronUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
-# Copyright (C) 2020-2023 by TgCatUB@Github.
+# Copyright (C) 2020-2023 by Tgultron@Github.
 
 # This file is part of: https://github.com/thanosuserss/Ultron
 # and is released under the "GNU v3.0 License Agreement".
@@ -302,7 +302,7 @@ async def upstream(event):
             f"I guess you are on selfhost. For self host you need to use `{cmdhd}update now`",
         )
     event = await edit_or_reply(event, "`Pulling the nekopack repo wait a sec ....`")
-    off_repo = "https://github.com/TgCatUB/nekopack"
+    off_repo = "https://github.com/Tgultron/nekopack"
     os.chdir("/app")
     try:
         txt = (

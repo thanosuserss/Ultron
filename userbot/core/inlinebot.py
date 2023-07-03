@@ -1,5 +1,5 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# UltronUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
-# Copyright (C) 2020-2023 by TgCatUB@Github.
+# Copyright (C) 2020-2023 by Tgultron@Github.
 
 # This file is part of: https://github.com/thanosuserss/Ultron
 # and is released under the "GNU v3.0 License Agreement".
@@ -164,7 +164,7 @@ async def deploy_article(event):
     buttons = [
         (
             Button.url("Source code", "https://github.com/thanosuserss/Ultron"),
-            Button.url("Deploy", "https://github.com/TgCatUB/nekopack"),
+            Button.url("Deploy", "https://github.com/Tgultron/nekopack"),
         )
     ]
     return await build_article(

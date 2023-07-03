@@ -4,7 +4,7 @@
 
 * Changed the docker base image to `catub/UltronUserBot:latest`. Users can use `catub/base:bullseye` in case of blacklisting by changing the image name in the Dockerfile.
 * Added a Docker Compose file with database support. Users can run the bot with a database, and if they don't set `DB_URI` in `config.py`, it will automatically make an SQLite database.
-* Added new [Documentation](https://tgcatub.gitbook.io/UltronUserBot/) .
+* Added new [Documentation](https://Tgultron.gitbook.io/UltronUserBot/) .
 * Changed the plugin log style in `botlogger` to make it less spammy.
 * Added logs support for VPS users (check `.help logs`).
 

@@ -19,7 +19,7 @@ Now that you got everything lets start hosting.
 
 Fork this repo in your Github account with a <mark style="color:red;">**random name**</mark> replacing **nekopack**.
 
-**Repo:** [<mark style="color:blue;">**https://github.com/TgCatUB/nekopack**</mark>](https://github.com/TgCatUB/nekopack)
+**Repo:** [<mark style="color:blue;">**https://github.com/Tgultron/nekopack**</mark>](https://github.com/Tgultron/nekopack)
 
 {% embed url="https://youtube.com/watch?v=dwsrFjXkALE" %}
 Fork Nekopack

@@ -1,5 +1,5 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# UltronUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
-# Copyright (C) 2020-2023 by TgCatUB@Github.
+# Copyright (C) 2020-2023 by Tgultron@Github.
 
 # This file is part of: https://github.com/thanosuserss/Ultron
 # and is released under the "GNU v3.0 License Agreement".
@@ -106,7 +106,7 @@ async def sticklet(event):
     draw = ImageDraw.Draw(image)
     fontsize = 230
     json = requests.get(
-        "https://raw.githubusercontent.com/TgCatUB/UltronUserBot-Resources/master/Resources/StickerFun/resources.txt"
+        "https://raw.githubusercontent.com/Tgultron/UltronUserBot-Resources/master/Resources/StickerFun/resources.txt"
     ).json()
     FONT_FILE = requests.get(random.choice(json["fonts"]))
     font = ImageFont.truetype(BytesIO(FONT_FILE.content), size=fontsize)

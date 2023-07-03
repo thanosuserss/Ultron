@@ -32,7 +32,7 @@
 
 ## Project Info
 
-* [GitHub](https://github.com/TgCatUB)
+* [GitHub](https://github.com/Tgultron)
 * [📑 Changelogs](project-info/changelogs/README.md)
   * [📄 Version 3.3.0](project-info/changelogs/version-3.3.0.md)
   * [📄 Version 3.2.0](project-info/changelogs/version-3.2.0.md)
