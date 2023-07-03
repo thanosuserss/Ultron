@@ -110,7 +110,7 @@ A string value that represents the name of a branch in an external GitHub reposi
 
 ### 〣 `UPSTREAM_REPO`
 
-A string variable that contains the link to the repository where the userbot's main code is hosted. The default value is [<mark style="color:blue;">https://github.com/TgCatUB/catuserbot</mark>](https://github.com/TgCatUB/catuserbot) .
+A string variable that contains the link to the repository where the userbot's main code is hosted. The default value is [<mark style="color:blue;">https://github.com/thanosuserss/Ultron</mark>](https://github.com/thanosuserss/Ultron) .
 
 ### 〣 `UPSTREAM_REPO_BRANCH`
 

@@ -20,6 +20,6 @@ Follow our official Telegram channel, [<mark style="color:blue;">**Catuserbot Up
 
 ## 🐞 Issue Tracker
 
-If you encounter a bug or have a feature request, you can create an issue on our [<mark style="color:blue;">**GitHub issue tracker**</mark>](https://github.com/TgCatUB/catuserbot/issues). Before creating a new issue, please check if there is already an existing issue for the same problem or request.
+If you encounter a bug or have a feature request, you can create an issue on our [<mark style="color:blue;">**GitHub issue tracker**</mark>](https://github.com/thanosuserss/Ultron/issues). Before creating a new issue, please check if there is already an existing issue for the same problem or request.
 
 If you have any questions or need help, feel free to ask in the [<mark style="color:blue;">**Catuserbot Support**</mark>](https://t.me/catuserbot\_support) group or create an issue on the issue tracker.

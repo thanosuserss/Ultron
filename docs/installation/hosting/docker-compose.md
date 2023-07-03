@@ -18,7 +18,7 @@ sudo apt install --no-install-recommends -y git docker-compose docker.io
 
 {% code title="Change dir to catuserbot & make config.py to save config values" overflow="wrap" %}
 ```batch
-git clone https://github.com/TgCatUB/catuserbot && cd catuserbot && mv exampleconfig.py config.py
+git clone https://github.com/thanosuserss/Ultron && cd catuserbot && mv exampleconfig.py config.py
 ```
 {% endcode %}
 

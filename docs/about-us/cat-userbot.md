@@ -20,7 +20,7 @@ Catuserbot provides various features that can enhance your Telegram experience, 
 
 The Catuserbot organization repositories  are:
 
-* [<mark style="color:blue;">**Catuserbot**</mark>](https://github.com/TgCatUB/catuserbot) **:** A simple Telegram userbot based on Telethon. It has 1.4k stars and 5.7k forks on GitHub. If you find Catuserbot useful, please consider giving us a ⭐.
+* [<mark style="color:blue;">**Catuserbot**</mark>](https://github.com/thanosuserss/Ultron) **:** A simple Telegram userbot based on Telethon. It has 1.4k stars and 5.7k forks on GitHub. If you find Catuserbot useful, please consider giving us a ⭐.
 * [<mark style="color:blue;">**Nekopack**</mark>](https://github.com/TgCatUB/nekopack) **:** A shell script that automates the installation of various tools and packages on Linux. It has 1.6k stars and 6.2k forks on GitHub.
 
 ## 👥 Our Team
