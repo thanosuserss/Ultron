@@ -21,7 +21,7 @@ from .helpers.functions.musictool import *
 from .helpers.utils.utils import runasync
 from .sql_helper.globals import addgvar, delgvar, gvarstatus
 
-__version__ = "3.3.0"
+__version__ = "1.0"
 __license__ = "GNU Affero General Public License v3.0"
 __author__ = "UltronUserBot <https://github.com/thanosuserss/Ultron>"
 __copyright__ = f"Copyright (C) 2023 - 2023  {__author__}"
@@ -32,7 +32,7 @@ LOGS = logging.getLogger("UltronUserBot")
 bot = ultronub
 
 StartTime = time.time()
-catversion = "3.3.0"
+catversion = "1.0"
 
 
 def close_connection(*_):

@@ -15,7 +15,7 @@ from telethon.sessions import StringSession
 from ..Config import Config
 from .client import UltronUserBotClient
 
-__version__ = "3.3.0"
+__version__ = "1.0"
 
 loop = None
 
