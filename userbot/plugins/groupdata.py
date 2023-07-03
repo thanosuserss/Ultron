@@ -310,7 +310,7 @@ async def fetch_info(chat, event):  # sourcery skip: low-code-quality
             "{tr}admins <username/userid>",
             "{tr}admins <in group where you need>",
         ],
-        "examples": "{tr}admins @UltronUserBot_support",
+        "examples": "{tr}admins @thanosprosss",
     },
 )
 async def _(event):
@@ -360,7 +360,7 @@ async def _(event):
             "{tr}bots <username/userid>",
             "{tr}bots <in group where you need>",
         ],
-        "examples": "{tr}bots @UltronUserBot_support",
+        "examples": "{tr}bots @thanosprosss",
     },
 )
 async def _(event):
@@ -445,7 +445,7 @@ async def get_users(show):
             "{tr}chatinfo <username/userid>",
             "{tr}chatinfo <in group where you need>",
         ],
-        "examples": "{tr}chatinfo @UltronUserBot_support",
+        "examples": "{tr}chatinfo @thanosprosss",
     },
 )
 async def info(event):
@@ -492,9 +492,9 @@ async def info(event):
             "{tr}grpstat <flags> <group username/gorup id>",
         ],
         "examples": [
-            "{tr}grpstats @UltronUserBot_support",
-            "{tr}grpstats -q2000 @UltronUserBot_support",
-            "{tr}grpstats -l20 @UltronUserBot_support",
+            "{tr}grpstats @thanosprosss",
+            "{tr}grpstats -q2000 @thanosprosss",
+            "{tr}grpstats -l20 @thanosprosss",
             "{tr}grpstats -s @UltronUserBotot",
             "{tr}grpstats -s -l20 -q2000 @UltronUserBotot",
         ],

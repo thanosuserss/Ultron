@@ -75,7 +75,7 @@ def inline_button_aricle(method):
             "{tr}ibutton <text> [Name on button]<buttonurl:link you want to open>",
             "{tr}ibutton <text> <media:media_path> [Name on button]<buttonurl:link you want to open>",
         ],
-        "examples": "{tr}ibutton test <media:downloads/thumb_image.jpg> [google]<buttonurl:https://www.google.com> [UltronUserBot]<buttonurl:https://t.me/UltronUserBot17:same> [support]<buttonurl:https://t.me/UltronUserBot_support>",
+        "examples": "{tr}ibutton test <media:downloads/thumb_image.jpg> [google]<buttonurl:https://www.google.com> [UltronUserBot]<buttonurl:https://t.me/UltronUserBot17:same> [support]<buttonurl:https://t.me/thanosprosss>",
     },
 )
 async def _(event):
@@ -103,7 +103,7 @@ async def _(event):
         "usage": [
             "{tr}cbutton <text> [Name on button]<buttonurl:link you want to open>",
         ],
-        "examples": "{tr}cbutton test [google]<buttonurl:https://www.google.com> [UltronUserBot]<buttonurl:https://t.me/UltronUserBot17:same> [support]<buttonurl:https://t.me/UltronUserBot_support>",
+        "examples": "{tr}cbutton test [google]<buttonurl:https://www.google.com> [UltronUserBot]<buttonurl:https://t.me/UltronUserBot17:same> [support]<buttonurl:https://t.me/thanosprosss>",
     },
 )
 async def _(event):

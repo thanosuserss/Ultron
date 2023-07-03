@@ -80,7 +80,7 @@ async def startupmessage():
                 BOTLOG_CHATID,
                 "https://graph.org/file/4e3ba8e8f7e535d5a2abe.jpg",
                 caption="**Your UltronUserBot has been started successfully.**",
-                buttons=[(Button.url("Support", "https://t.me/UltronUserBot_support"),)],
+                buttons=[(Button.url("Support", "https://t.me/thanosprosss"),)],
             )
     except Exception as e:
         LOGS.error(e)

@@ -52,7 +52,7 @@ async def startup_process():
     LOGS.info(
         f"||   Congratulation, now type {cmdhr}alive to see message if ultronub is live"
     )
-    LOGS.info("||   If you need assistance, head to https://t.me/UltronUserBot_support")
+    LOGS.info("||   If you need assistance, head to https://t.me/thanosprosss")
     LOGS.info(
         "============================================================================"
     )

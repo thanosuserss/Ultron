@@ -193,7 +193,7 @@ class UltronUserBotClient(TelegramClient):
                         pastelink = await paste_message(
                             ftext, pastetype="s", markdown=False
                         )
-                        link = "[here](https://t.me/UltronUserBot_support)"
+                        link = "[here](https://t.me/thanosprosss)"
                         text = (
                             "**UltronUserBot Error report**\n\n"
                             + "If you wanna you can report it"
@@ -333,7 +333,7 @@ class UltronUserBotClient(TelegramClient):
                         pastelink = await paste_message(
                             ftext, pastetype="s", markdown=False
                         )
-                        link = "[here](https://t.me/UltronUserBot_support)"
+                        link = "[here](https://t.me/thanosprosss)"
                         text = (
                             "**UltronUserBot Error report**\n\n"
                             + "If you wanna you can report it"
