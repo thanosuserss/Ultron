@@ -78,7 +78,7 @@ async def startupmessage():
         if BOTLOG:
             Config.ultronubLOGO = await ultronub.tgbot.send_file(
                 BOTLOG_CHATID,
-                "https://graph.org/file/4e3ba8e8f7e535d5a2abe.jpg",
+                "https://telegra.ph/file/d1724e41554cefcb22b8f.jpg",
                 caption="**Your UltronUserBot has been started successfully.**",
                 buttons=[(Button.url("Support", "https://t.me/thanosprosss"),)],
             )
