@@ -1,23 +1,12 @@
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# UltronUserBot #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
-# Copyright (C) 2023-2023 by Tgultron@Github.
-
-# This file is part of: https://github.com/thanosuserss/Ultron
-# and is released under the "GNU v3.0 License Agreement".
-
-# Please see: https://github.com/thanosuserss/Ultron/blob/master/LICENSE
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
-
-FROM ultronub/core:bullseye
-
-# Working directory 
-WORKDIR /userbot
-
-# Timezone
-ENV TZ=Asia/Kolkata
-
-## Copy files into the Docker image
-COPY . .
-
-ENV PATH="/home/userbot/bin:$PATH"
-
-CMD ["python3","-m","userbot"]
+FROM python:3.9.7-slim-buster
+RUN apt-get update && apt-get upgrade -y
+RUN apt-get install git curl python3-pip ffmpeg -y
+RUN pip3 install -U pip
+RUN python3 -m pip install --upgrade pip
+RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
+RUN apt-get install -y nodejs
+RUN npm i -g npm
+COPY . /app/
+WORKDIR /app/
+RUN pip3 install -U -r requirements.txt
+CMD ["bash","start.sh"]
