@@ -31,7 +31,6 @@ openai
 Pillow
 prettytable
 psutil
-psycopg2
 pyfiglet
 PyGithub
 pygments
